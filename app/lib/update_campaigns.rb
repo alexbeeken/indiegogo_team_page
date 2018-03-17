@@ -11,7 +11,7 @@ class UpdateCampaigns
     942524
   ]
 
-  def self.scrape
+  def self.run
     objects = JSON.parse(File.open("./app/lib/0.txt", "rb").read)["response"]
     # response = Net::HTTP.get(URI("https://api.indiegogo.com/2/campaigns.json?id=#{TEAM_IDS}"))
     objects.each do |object|
@@ -22,7 +22,8 @@ class UpdateCampaigns
           title: object["title"],
           slug: object["slug"],
           goal: object["goal"],
-          raised: object["collected_funds"]
+          raised: object["collected_funds"],
+          image_url: object["image_types"]["baseball_card"]
         )
       else
         Campaign.create!(
@@ -30,7 +31,8 @@ class UpdateCampaigns
           title: object["title"],
           slug: object["slug"],
           goal: object["goal"],
-          raised: object["collected_funds"]
+          raised: object["collected_funds"],
+          image_url: object["image_types"]["baseball_card"]
         )
       end
     end

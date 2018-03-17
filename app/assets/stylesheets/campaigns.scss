@@ -1,0 +1,29 @@
+$padding: 10px;
+$card-height: 150px;
+$card-width: 200px;
+
+.campaigns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  .campaign {
+    padding: $padding;
+    width: $card-width;
+    height: $card-height;
+    border: 2px solid black;
+    margin: 20px;
+    .title {
+
+    }
+    &:hover {
+      box-shadow: 0.03em 0.03em 0.03em 0.03em gray;
+    }
+  }
+}

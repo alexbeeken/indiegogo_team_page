@@ -1,12 +1,20 @@
 Ooolation Fundraising Campaign
 
-<ol>
-<% @campaigns.each do |campaign| %>
-  <li>
-    <%= campaign.title %>
-    raised <%= campaign.raised %> / <%= campaign.goal %>
+<div class='progress'>
+  raised: <%= @all_raised %> out of <%= @all_goal %>
+</div>
 
-    ------------
-  </li>
-<% end %>
-</ol>
+<div class='campaigns'>
+  <% @campaigns.each do |campaign| %>
+    <a href="http://www.indiegogo.com/#{campaign.slug}">
+      <div class='campaign' style=<%="background-image:url(#{campaign.image_url})" %>>
+        <div class='title'>
+          <%= campaign.title %>
+        </div>
+        raised <%= campaign.raised %> / <%= campaign.goal %>
+
+        ------------
+      </div>
+    </a>
+  <% end %>
+</div>
