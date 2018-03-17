@@ -1,0 +1,12 @@
+Ooolation Fundraising Campaign
+
+<ol>
+<% @campaigns.each do |campaign| %>
+  <li>
+    <%= campaign.title %>
+    raised <%= campaign.raised %> / <%= campaign.goal %>
+
+    ------------
+  </li>
+<% end %>
+</ol>
