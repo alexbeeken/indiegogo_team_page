@@ -1,7 +1,23 @@
 Ooolation Fundraising Campaign
 
 <div class='progress'>
-  raised: <%= @all_raised %> out of <%= @all_goal %>
+  <div class='progress-bar'>
+    <div class='raised' style=<%="width:#{@raised_percentage};#{@raised_extra_styles}"%>>
+    </div>
+    <div class='togo' style=<%="width:#{@togo_percentage};#{@togo_extra_styles}" %>>
+    </div>
+  </div>
+  <div class='progress-numbers'>
+    <div class='raised'>
+      <%= @all_raised %>
+    </div>
+    <div class='of'>
+      of
+    </div>
+    <div class='goal'>
+      <%= @all_goal %>
+    </div>
+  </div>
 </div>
 
 <div class='campaigns'>
