@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180317193238) do
+ActiveRecord::Schema.define(version: 20180317211420) do
 
   create_table "campaigns", force: :cascade do |t|
     t.string "slug"
@@ -19,6 +19,15 @@ ActiveRecord::Schema.define(version: 20180317193238) do
     t.string "title"
     t.integer "igg_id"
     t.string "image_url"
+  end
+
+  create_table "project_snapshots", force: :cascade do |t|
+    t.string "raised"
+    t.string "goal"
+    t.string "percent_raised"
+    t.string "percent_togo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

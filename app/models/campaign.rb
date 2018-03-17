@@ -1,3 +1,2 @@
 class Campaign < ApplicationRecord
-  
 end

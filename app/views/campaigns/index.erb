@@ -2,26 +2,26 @@ Ooolation Fundraising Campaign
 
 <div class='progress'>
   <div class='progress-bar'>
-    <div class='raised' style=<%="width:#{@raised_percentage};#{@raised_extra_styles}"%>>
+    <div class='raised' style=<%="width:#{@snapshot.percent_raised};#{@raised_extra_styles}"%>>
     </div>
-    <div class='togo' style=<%="width:#{@togo_percentage};#{@togo_extra_styles}" %>>
+    <div class='togo' style=<%="width:#{@snapshot.percent_togo};#{@togo_extra_styles}" %>>
     </div>
   </div>
   <div class='progress-numbers'>
     <div class='raised'>
-      <%= @all_raised %>
+      <%= @snapshot.raised %>
     </div>
     <div class='of'>
       of
     </div>
     <div class='goal'>
-      <%= @all_goal %>
+      <%= @snapshot.goal %>
     </div>
   </div>
 </div>
 
 <div class='campaigns'>
-  <% @campaigns.each do |campaign| %>
+  <% Campaign.all.each do |campaign| %>
     <a href="http://www.indiegogo.com/#{campaign.slug}">
       <div class='campaign' style=<%="background-image:url(#{campaign.image_url})" %>>
         <div class='title'>
