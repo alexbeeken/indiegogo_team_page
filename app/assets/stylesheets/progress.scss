@@ -19,7 +19,6 @@ $togo-color: #bc9f76;
     margin-top: 20px;
     font-family: 'numbers';
     font-weight: bold;
-    text-shadow: 2px 2px 2px white;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -38,5 +37,9 @@ $togo-color: #bc9f76;
       color: $raised-color;
       margin-right: 5px;
     }
+  }
+
+  .tree {
+    width: 100%;
   }
 }
