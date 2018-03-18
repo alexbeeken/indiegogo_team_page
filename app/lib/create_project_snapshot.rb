@@ -2,10 +2,10 @@ class CreateProjectSnapshot
   class << self
     def run
       ProjectSnapshot.create!(
-        raised: format_money(all_raised),
-        goal: format_money(all_goals),
-        percent_raised: format_percent(percent_raised),
-        percent_togo: format_percent(percent_togo)
+        raised: StringFormatter.format_money(all_raised),
+        goal: StringFormatter.format_money(all_goals),
+        percent_raised: StringFormatter.format_percent(percent_raised),
+        percent_togo: StringFormatter.format_percent(percent_togo)
       )
     end
 
@@ -26,14 +26,6 @@ class CreateProjectSnapshot
 
     def percent_togo
       100 - percent_raised
-    end
-
-    def format_percent(number)
-      "#{number}%"
-    end
-
-    def format_money(number)
-      "$%.2f" % number
     end
   end
 end

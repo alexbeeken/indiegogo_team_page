@@ -1,6 +1,8 @@
 $padding: 10px;
 $card-height: 150px;
 $card-width: 200px;
+$raised-color: #22b743;
+$togo-color: #6d5b42;
 
 .campaigns {
   display: flex;
@@ -14,15 +16,40 @@ $card-width: 200px;
     color: black;
   }
   .campaign {
-    padding: $padding;
     width: $card-width;
     height: $card-height;
     border: 2px solid black;
     margin: 20px;
-    .title {
-
+    .campaign-spacer {
+      height: 125px;
+    }
+    .raised-numbers {
+      height: 15px;
+      width: 0px;
+      overflow: hidden;
+      color: white;
+      text-shadow: 1px 1px 2px black;
+    }
+    .progress-bar {
+      height: 10px;
+      .raised {
+        float: left;
+        height: 10px;
+        background-color: $raised-color;
+      }
+      .togo {
+        float: right;
+        height: 10px;
+        background-color: $togo-color;
+      }
     }
     &:hover {
+      .raised-numbers {
+        display: block;
+        width: 500px;
+        -webkit-transition: width 0.8s ease-out; /* Safari */
+        transition: width 0.8s ease-out;
+      }
       box-shadow: 0.03em 0.03em 0.03em 0.03em gray;
     }
   }

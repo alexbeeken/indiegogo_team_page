@@ -1,4 +1,11 @@
-Ooolation Fundraising Campaign
+<div class='title'>
+  <div class='logo'>
+    <%= image_tag 'logo.png' %>
+  </div>
+  <div class='subtitle'>
+    A creative incubator for kaleidoscope ideas and voices to collide consonantly.
+  </div>
+</div>
 
 <div class='progress'>
   <div class='progress-bar'>
@@ -24,12 +31,17 @@ Ooolation Fundraising Campaign
   <% Campaign.all.each do |campaign| %>
     <a href="http://www.indiegogo.com/#{campaign.slug}">
       <div class='campaign' style=<%="background-image:url(#{campaign.image_url})" %>>
-        <div class='title'>
-          <%= campaign.title %>
+        <div class='campaign-spacer'>
         </div>
-        raised <%= campaign.raised %> / <%= campaign.goal %>
-
-        ------------
+        <div class='raised-numbers'>
+          <%= campaign.display_raised %> raised
+        </div>
+        <div class='progress-bar'>
+          <div class='raised' style=<%="width:#{campaign.percent_raised}"%>>
+          </div>
+          <div class='togo' style=<%="width:#{campaign.percent_togo}" %>>
+          </div>
+        </div>
       </div>
     </a>
   <% end %>

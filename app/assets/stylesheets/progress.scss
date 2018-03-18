@@ -1,3 +1,6 @@
+$raised-color: #22b743;
+$togo-color: #6d5b42;
+
 .progress {
   .progress-bar {
     height: 100px;
@@ -5,7 +8,7 @@
     flex-direction: row;
     .raised {
       height: 80px;
-      background-color: blue;
+      background-color: $raised-color;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -14,7 +17,7 @@
     }
     .togo {
       height: 80px;
-      background-color: red;
+      background-color: $togo-color;
       display: flex;
       justify-content: center;
       align-items: center;
