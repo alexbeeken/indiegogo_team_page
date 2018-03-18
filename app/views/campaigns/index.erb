@@ -3,15 +3,13 @@
     <%= image_tag 'logo.png' %>
   </div>
   <div class='subtitle'>
-    A creative incubator for kaleidoscopic voices.
+    creative incubator of kaleidoscopic voices
   </div>
 </div>
 
 <div class='progress'>
   <div class='progress-bar'>
     <div class='raised' style=<%="width:#{@snapshot.percent_raised};#{@raised_extra_styles}"%>>
-    </div>
-    <div class='togo' style=<%="width:#{@snapshot.percent_togo};#{@togo_extra_styles}" %>>
     </div>
   </div>
   <div class='progress-numbers'>
@@ -38,12 +36,26 @@
             <%= campaign.display_raised %> raised
           </div>
         </div>
-        <div class='progress-bar'>
-          <div class='raised' style=<%="width:#{campaign.percent_raised}"%>>
-          </div>
-          <div class='togo' style=<%="width:#{campaign.percent_togo}" %>>
-          </div>
-        </div>
+      </div>
+      <div class='raised-circle'>
+        <svg viewbox="0 0 36.8 36.8" class="circular-chart">
+          <path class="circle"
+            stroke-dasharray=<%= "#{campaign.integer_percent_raised},100" %>
+            d="M18 2.0845
+              a 15.9155 15.9155 0 0 1 0 31.831
+              a 15.9155 15.9155 0 0 1 0 -31.831"
+          />
+        </svg>
+      </div>
+      <div class='raised-circle togo-circle'>
+        <svg viewbox="0 0 36.8 36.8" class="circular-chart">
+          <path class="circle togo"
+            stroke-dasharray=<%= "100,100" %>
+            d="M18 2.0845
+              a 15.9155 15.9155 0 0 1 0 31.831
+              a 15.9155 15.9155 0 0 1 0 -31.831"
+          />
+        </svg>
       </div>
     </a>
   <% end %>

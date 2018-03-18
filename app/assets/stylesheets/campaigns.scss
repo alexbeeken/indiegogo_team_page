@@ -1,10 +1,8 @@
-$padding: 10px;
-$card-height: 200px;
-$card-width: 200px;
 $raised-color: #199e35;
 $togo-color: #bc9f76;
 
 .campaigns {
+  margin-top: 30px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -16,35 +14,20 @@ $togo-color: #bc9f76;
     color: black;
   }
   .campaign {
-    width: $card-width;
-    height: $card-height;
+    width: 200px;
+    height: 200px;
     border: 2px solid black;
     border-radius: 500px;
     margin: 20px;
-    z-index: 10;
+    position: relative;
+    z-index: 20;
     .campaign-spacer {
       height: 120px;
-    }
-    .progress-bar {
-      z-index: 100;
-      position: relative;
-      height: 10px;
-      z-index: 10;
-      .raised {
-        float: left;
-        height: 10px;
-        background-color: $raised-color;
-      }
-      .togo {
-        float: right;
-        height: 10px;
-        background-color: $togo-color;
-      }
     }
     .raised-spacer {
       height: 20px;
       .raised-numbers {
-        z-index: 10;
+        z-index: 100;
         position: relative;
         font-family: 'numbers';
         font-weight: bold;
@@ -70,9 +53,33 @@ $togo-color: #bc9f76;
       box-shadow: 0.03em 0.03em 0.03em 0.03em gray;
     }
   }
+  .raised-circle {
+    position: relative;
+    z-index: 10;
+    transform: translateY(-240px);
+    .circular-chart {
+      .togo {
+        z-index: 0;
+        stroke: $togo-color;
+      }
+      z-index: 10;
+      position: absolute;
+      width: 249px;
+      height: 241px;
+    }
+    .circle {
+      stroke: $raised-color;
+      fill: none;
+      stroke-width: 2;
+      animation: progress 1s ease-out forwards;
+    }
+  }
+  .togo-circle {
+    z-index: 9;
+  }
 }
 
 @keyframes popup {
-    0%   {transform: translateY(20px)}
+    0%   {transform: translateY(50px)}
     100% {transform: translateY(0px)}
 }
