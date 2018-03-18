@@ -3,11 +3,12 @@ $togo-color: #bc9f76;
 
 .progress {
   .progress-bar {
-    height: 100px;
+    height: 20px;
+    min-width: 300px;
     display: flex;
     flex-direction: row;
     background-color: $togo-color;
-    border-radius: 60px;
+    border-radius: 10px;
     overflow: hidden;
     .raised {
       background-color: $raised-color;
