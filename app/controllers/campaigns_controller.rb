@@ -8,10 +8,10 @@ class CampaignsController < ApplicationController
 
   def calculate_extra_styles
     if @snapshot.goal_met?
-      @raised_extra_styles="border-radius:20px"
+      @raised_extra_styles="border-radius:60px"
       @togo_extra_styles=""
     elsif @snapshot.no_donations?
-      @togo_extra_styles="border-radius:20px"
+      @togo_extra_styles="border-radius:60px"
       @raised_extra_styles=""
     else
       @raised_extra_styles=""

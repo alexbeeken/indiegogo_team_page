@@ -1,5 +1,5 @@
-$raised-color: #22b743;
-$togo-color: #6d5b42;
+$raised-color: #199e35;
+$togo-color: #bc9f76;
 
 .progress {
   .progress-bar {
@@ -13,7 +13,7 @@ $togo-color: #6d5b42;
       justify-content: center;
       align-items: center;
       border: 0px solid black;
-      border-radius: 20px 0px 0px 20px;
+      border-radius: 60px 0px 0px 60px;
     }
     .togo {
       height: 80px;
@@ -21,10 +21,13 @@ $togo-color: #6d5b42;
       display: flex;
       justify-content: center;
       align-items: center;
-      border-radius: 0px 20px 20px 0px;
+      border-radius: 0px 60px 60px 0px;
     }
   }
   .progress-numbers {
+    font-family: 'numbers';
+    font-weight: bold;
+    text-shadow: 2px 2px 2px white;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -36,11 +39,11 @@ $togo-color: #6d5b42;
       font-size: 25px;
     }
     .goal {
-      color: red;
+      color: $togo-color;
       margin-left: 5px;
     }
     .raised {
-      color: blue;
+      color: $raised-color;
       margin-right: 5px;
     }
   }
