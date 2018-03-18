@@ -1,0 +1,18 @@
+@keyframes fly {
+  from { transform: translateY(-100); }
+  to   { transform: translateY(100);  }
+}
+
+.taneger-fly-space {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  animation: fly 2s;
+  -moz-animation: fly 2s; /* Firefox */
+  -webkit-animation: fly 2s; /* Safari and Chrome */
+  -o-animation: fly 2s; /* Opera */
+  .taneger {
+    position: relative;
+    z-index: 0;
+  }
+}
