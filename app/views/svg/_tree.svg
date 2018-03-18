@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="451" height="1859" viewBox="0 0 451 1859">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 451 1859" id="tree">
   <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
@@ -9,6 +9,13 @@
 <?xpacket end="w"?></metadata>
 <defs>
     <style>
+      @media screen
+        and (min-device-width: 1200px) {
+          #tree {
+            max-width: 451px;
+          }
+      }
+
       .cls-1, .cls-10, .cls-12, .cls-13, .cls-14, .cls-15, .cls-2, .cls-4, .cls-5, .cls-8, .cls-9 {
         fill: #6a8751;
       }
