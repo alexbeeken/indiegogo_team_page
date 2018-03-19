@@ -15,7 +15,16 @@
  */
 
 body {
-  background: linear-gradient(#8caabe, white);
+  background: linear-gradient(#7399be, white);
   background-repeat: no-repeat;
   background-attachment: fixed;
+  height: 100%;
+  margin: 0px;
+  .sunrise {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 70vh;
+    // background: linear-gradient(#00529c, #c3bdbd);
+  }
 }

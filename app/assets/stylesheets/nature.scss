@@ -1,18 +1,69 @@
+@-webkit-keyframes fly {
+  0%   { transform: scale(0.8, 0.8); left: -20%; bottom: -130px; }
+  10%   { bottom: -130px; }
+  30%   { bottom: -100px; }
+  100% { transform: scale(0.3, 0.3); left: 100%; bottom: -10px; opacity: 0;}
+}
+@-moz-keyframes fly {
+  0%   { transform: scale(0.8, 0.8); left: -20%; bottom: -130px; }
+  10%   { bottom: -130px; }
+  30%   { bottom: -100px; }
+  100% { transform: scale(0.3, 0.3); left: 100%; bottom: -10px; opacity: 0;}
+}
+@-o-keyframes fly {
+  0%   { transform: scale(0.8, 0.8); left: -20%; bottom: -130px; }
+  10%   { bottom: -130px; }
+  30%   { bottom: -100px; }
+  100% { transform: scale(0.3, 0.3); left: 100%; bottom: -10px; opacity: 0;}
+}
 @keyframes fly {
-  from { transform: translateY(-100); }
-  to   { transform: translateY(100);  }
+  0%   { left: -20%; bottom: -130px; }
+  50%  { transform: scale(0.8, 0.8); left: -20%; bottom: -130px; }
+  60%  { bottom: -130px; }
+  80%  { bottom: -100px; }
+  100% { transform: scale(0.3, 0.3); left: 100%; bottom: -10px; }
 }
 
-.taneger-fly-space {
-  position: absolute;
-  width: 100%;
-  top: 0px;
-  animation: fly 2s;
-  -moz-animation: fly 2s; /* Firefox */
-  -webkit-animation: fly 2s; /* Safari and Chrome */
-  -o-animation: fly 2s; /* Opera */
-  .taneger {
+.nature {
+  overflow: hidden;
+  
+  .skyline {
+    position: absolute;
+    top: 20vh;
+    width: 100%;
+  }
+
+  .information {
+    position: absolute;
+    z-index: 100;
+    text-align: center;
+    margin-top: 600px;
+    width: 100%;
+    font-family: 'main';
+    font-weight: bold;
+    font-size: 19px;
+  }
+  .taneger-fly-space {
+    position: absolute;
+    top: 200px;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    .taneger {
+      left: -20%;
+      bottom: -130px;
+      position: relative;
+      z-index: 0;
+      width: 150px;
+      animation: fly 4s 1 linear forwards;
+      -moz-animation: fly 4s 1 linear forwards; /* Firefox */
+      -webkit-animation: fly 4s 1 linear forwards; /* Safari and Chrome */
+      -o-animation: fly 4s 1 linear forwards; /* Opera */
+    }
+  }
+
+  .aspen {
     position: relative;
-    z-index: 0;
+    z-index: 10;
   }
 }

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1242 1874">
+  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""/>
+   </rdf:RDF>
+</x:xmpmeta>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?xpacket end="w"?></metadata>
+<defs>
+    <style>
+      .hcls-1 {
+        fill-rule: evenodd;
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="1422" y1="329.941" x2="-132" y2="1544.059" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#747264"/>
+      <stop offset="1" stop-color="#ded1b1"/>
+    </linearGradient>
+  </defs>
+  <g id="Artboard_1" data-name="Artboard 1">
+    <path class="hcls-1" d="M-132,1874V297H-2V285h-9V39h2V35H3.9L2,34l5.463,1H8v0.1L29.313,39h3.354L35,38l19-5H68l24-2,29-6,16-9,17-4,28-3,22-5,24-4,18,1,19,8,20,3,14,12,8,14,7-1,12,1,22,5,4,6,13,5,18-4,18,2,13-3h12l12,2,8-2,10,9,10,9,8,8,13-1,9,7,10-3,12,6,12-1,13,4h14l17,7h23l16-1,10-5,8,5,8,7h10l9,4,12,3,11-3,4-13,5-12,6-2,8,8,4,10,6,15,6,9,12,7h10l12,1,10,4,11-6h10l8,11,11,9,7-8,9-2,8,2,14,15,14,5h11l11,4,8,9,6-6,12,4,8-5-3-8-9-1-2-20v-8l9-5V102l8,2,2-24,7,2-1-14,2-11,10,16,6,16,9,2,2,13-3,6,3,8,5,4-1,14,5,5,5-5,8,12-4,6,3,10h19l9,5h9l8,6h10l3-11,7,12,8-2,12,1,6-14,6,8-2,14,15,5,9,5-2-14,1-8,11,6,2,12,5,7,7,9,18,9h11l12,2,23,6,17,12,14,12,13,8,12.86,5H1245v38h177V1874H-132ZM8,37.158V39h3.5Zm1130,204.8V242h0.21Zm80,14.645V257h2.15Zm13,2.38V259h0.07Z"/>
+  </g>
+</svg>
