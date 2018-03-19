@@ -26,9 +26,10 @@
 
 .nature {
   overflow: hidden;
-  
+
   .skyline {
-    position: absolute;
+    position: fixed;
+    z-index: 0;
     top: 20vh;
     width: 100%;
   }
@@ -42,7 +43,17 @@
     font-family: 'main';
     font-weight: bold;
     font-size: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 3000px;
+    .blurb {
+      margin-top: 500px;
+      font-size: 2em;
+    }
   }
+
   .taneger-fly-space {
     position: absolute;
     top: 200px;

@@ -14,7 +14,12 @@
     <%= render 'svg/skyline.svg' %>
   </div>
   <div class='information'>
-    Ooolation is a creative space for musicians to gather, share and collaborate.
+    <div class='blurb'>
+      <%= scroll_reveal content: 'Ooolation is a creative space for musicians to gather, share and collaborate.', animation: 'enter left and move 50px over 1.33s' %>
+    </div>
+    <div class='blurb'>
+      <%= scroll_reveal content: 'We gather each year in the Eastern Sierra Nevada mountains to rehearse and perform.', animation: 'enter left and move 50px over 1.33s' %>
+    </div>
   </div>
   <div class='aspen'>
     <%= render 'svg/aspen.svg' %>
