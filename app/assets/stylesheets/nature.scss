@@ -94,13 +94,13 @@
     top: 100px;
   }
   #blurb2 {
-    top: 200px;
+    top: 220px;
   }
   #blurb3 {
-    top: 300px;
+    top: 340px;
   }
   #blurb4 {
-    top: 400px;
+    top: 460px;
   }
   #blurb5 {
     top: 200px;
@@ -110,6 +110,7 @@
   align-items: center;
   flex-direction: column;
   .fades-in {
+    font-size: 2em;
     text-align: center;
     font-family: 'main';
     text-align: center;
@@ -118,7 +119,6 @@
     top: 200px;
     position: fixed;
     z-index: 100;
-    font-size: 1.2em;
     transition: opacity 1s;
     -moz-transition: opacity 1s; /* Firefox */
     -webkit-transition: opacity 1s; /* Safari and Chrome */

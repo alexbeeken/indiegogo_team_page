@@ -74,8 +74,6 @@ $(window).ready(function(){
       $(".title").css("top", "-20vh")
       if (scrollPos > blurb1) {
         $(".taneger").addClass('fly');
-        $(".skyline").addClass("sky-up");
-        $(".aspen").addClass("tree-up");
         $("#blurb1").css('opacity', '1');
         if (scrollPos > blurb2) {
           $("#blurb2").css('opacity', '1');
@@ -89,12 +87,8 @@ $(window).ready(function(){
                 $("#blurb3").css('opacity', '0');
                 $("#blurb4").css('opacity', '0');
                 $("#blurb5").css('opacity', '1');
-                $(".aspen").addClass("tree-up-up");
-                $(".skyline").addClass("sky-up-up");
               } else {
                 $("#blurb5").css('opacity', '0');
-                $(".aspen").removeClass("tree-up-up");
-                $(".skyline").removeClass('sky-up-up');
               }
             }
           }
@@ -106,8 +100,6 @@ $(window).ready(function(){
         $("#blurb4").css('opacity', '0');
         $("#blurb5").css('opacity', '0');
         $(".taneger").removeClass('fly');
-        $(".skyline").removeClass('sky-up');
-        $(".aspen").removeClass("tree-up");
         $("#blurb1").css('opacity', '0');
       }
     } else {
