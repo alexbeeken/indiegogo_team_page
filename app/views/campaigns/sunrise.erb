@@ -11,22 +11,21 @@
         <%= render 'svg/skyline.svg' %>
       </div>
     </div>
-
-    <div class='sunrise2'>
-      <a href='#' name='sunrise2'></a>
-      <div class='aspen'>
-        <%= render 'svg/aspen.svg' %>
-      </div>
-      <div class='taneger-fly-space'>
-        <div class='taneger'>
-          <%= render 'svg/taneger.svg' %>
-        </div>
+    <div class='aspen'>
+      <%= render 'svg/aspen.svg' %>
+    </div>
+    <div class='taneger-fly-space'>
+      <div class='taneger'>
+        <%= render 'svg/taneger.svg' %>
       </div>
     </div>
   </div>
 
-  <div class='information1'>
-    <a href='#' name='information1'></a>
+  <div class='blurbs'>
+    <div class='blurb1'><a href='#' name='blurb1'></a></div>
+    <div class='blurb2'><a href='#' name='blurb2'></a></div>
+    <div class='blurb3'><a href='#' name='blurb3'></a></div>
+    <div class='blurb4'><a href='#' name='blurb4'></a></div>
     <div id='blurb1' class='fades-in'>
       Ooolation is a <strong>creative incubator</strong> for musicians and artists.
     </div>
@@ -39,11 +38,13 @@
     <div id='blurb4' class='fades-in'>
       The week culminates in several amazing performances.
     </div>
-  </div>
-  <div class='information2'>
-    <a href='#' name='information2'></a>
+    <div class='blurb5'><a href='#' name='blurb5'></a></div>
     <div id='blurb5' class='fades-in'>
-      We need <strong>your help</strong> to continue bringing these messages to our vulnerable world.
+      We need
+      <strong>
+      <%= link_to "your help", funds_path %>
+      </strong>
+       to continue bringing these messages to our vulnerable world.
     </div>
   </div>
 </div>
@@ -59,38 +60,56 @@ function scrollTo(offset){
 }
 
 var sunrise1 = $('a[name="sunrise1"]').offset().top;
-var sunrise2 = $('a[name="sunrise2"]').offset().top;
-var information1 = $('a[name="information1"]').offset().top;
-var information2 = $('a[name="information2"]').offset().top;
+var blurb1 = $('a[name="blurb1"]').offset().top;
+var blurb2 = $('a[name="blurb2"]').offset().top;
+var blurb3 = $('a[name="blurb3"]').offset().top;
+var blurb4 = $('a[name="blurb4"]').offset().top;
+var blurb5 = $('a[name="blurb5"]').offset().top;
 var scrollPos = 0;
 
 $(window).ready(function(){
   $(window).scroll(function() {
     scrollPos = $(this).scrollTop();
-    if (scrollPos > sunrise1 + 5) {
-      if (scrollPos > sunrise2) {
-        $(".title").css("top", "-400px")
+    if (scrollPos > sunrise1) {
+      $(".title").css("top", "-200px")
+      if (scrollPos > blurb1) {
         $(".taneger").addClass('fly');
         $(".skyline").css("top", "-400px");
         $(".aspen").css("top", "-700px");
         $("#blurb1").css('opacity', '1');
-        if (scrollPos > information1) {
-          if (scrollPos > information2) {
-            document.location.href = "/funds";
-            $(this).scrollTop(0);
+        if (scrollPos > blurb2) {
+          $("#blurb2").css('opacity', '1');
+          if (scrollPos > blurb3) {
+            $("#blurb3").css('opacity', '1');
+            if (scrollPos > blurb4) {
+              $("#blurb4").css('opacity', '1');
+              if (scrollPos > blurb5) {
+                $("#blurb1").css('opacity', '0');
+                $("#blurb2").css('opacity', '0');
+                $("#blurb3").css('opacity', '0');
+                $("#blurb4").css('opacity', '0');
+                $("#blurb5").css('opacity', '1');
+                $( ".aspen" ).css("top", "-1200px");
+              } else {
+                $("#blurb5").css('opacity', '0');
+                $( ".aspen" ).css("top", "-700px");
+              }
+            }
           }
-        } else {
-
         }
       } else {
-        $(".title").css("top", "20px")
+        $("#blurb1").css('opacity', '0');
+        $("#blurb2").css('opacity', '0');
+        $("#blurb3").css('opacity', '0');
+        $("#blurb4").css('opacity', '0');
+        $("#blurb5").css('opacity', '0');
         $(".taneger").removeClass('fly');
         $(".skyline").css("top", "200px");
         $(".aspen").css("top", "300px");
         $("#blurb1").css('opacity', '0');
       }
     } else {
-
+      $(".title").css("top", "20px")
     }
   });
 });

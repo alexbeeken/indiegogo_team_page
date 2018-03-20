@@ -19,7 +19,7 @@
   overflow: hidden;
   .aspen {
     position: fixed;
-    width: 50%;
+    width: 45%;
     z-index: 50;
     top: 300px;
     transition: top 1s, left 1s;
@@ -34,11 +34,7 @@
   }
 
   .sunrise1 {
-    height: 2000px;
-  }
-
-  .sunrise2 {
-    height: 2000px;
+    height: 5000px;
   }
 
   .taneger-fly-space {
@@ -62,12 +58,26 @@
   }
 }
 
-.information {
-  height: 2000px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.blurbs {
+  .blurb1 {
+    height: 1200px;
+    text-align: center;
+  }
+  .blurb2 {
+    height: 1200px;
+    text-align: center;
+  }
+  .blurb3 {
+    height: 1200px;
+    text-align: center;
+  }
+  .blurb4 {
+    height: 1200px;
+    text-align: center;
+  }
+  .blurb5 {
+    height: 100px;
+  }
   #blurb1 {
     top: 100px;
   }
@@ -83,16 +93,20 @@
   #blurb5 {
     top: 200px;
   }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   .fades-in {
+    text-align: center;
     font-family: 'main';
     text-align: center;
-    width: 600px;
-    margin-left: 100px;
+    width: 100%;
     opacity: 0;
     top: 200px;
     position: fixed;
     z-index: 100;
-    font-size: 2em;
+    font-size: 1.2em;
     transition: opacity 1s;
     -moz-transition: opacity 1s; /* Firefox */
     -webkit-transition: opacity 1s; /* Safari and Chrome */
