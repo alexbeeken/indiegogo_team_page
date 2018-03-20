@@ -15,16 +15,12 @@
  */
 
 body {
-  background: linear-gradient(#7399be, white);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   height: 100%;
   margin: 0px;
   .sunrise {
-    position: absolute;
-    z-index: 0;
-    width: 100%;
-    height: 70vh;
-    background: linear-gradient(#7399be, white);
+    background: linear-gradient(10deg, white, white, white, white, #7399be, #7399be, #7399be, #f47142, #000);
+  }
+  .funds {
+    background: linearGradient()
   }
 }

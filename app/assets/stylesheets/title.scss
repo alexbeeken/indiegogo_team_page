@@ -1,12 +1,12 @@
 .title {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  position: fixed;
+  z-index: 5;
   width: 100%;
-  margin-top: 20px;
+  top: 20px;
+  transition: top 2s;
+  -moz-transition: top 2s; /* Firefox */
+  -webkit-transition: top 2s; /* Safari and Chrome */
+  -o-transition: top 2s; /* Opera */
   .logo {
     display: flex;
     align-items: center;

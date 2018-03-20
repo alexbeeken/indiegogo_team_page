@@ -1,16 +1,97 @@
 <div class='sunrise'>
   <div class='nature'>
-    <div class='skyline'>
-      <%= render 'svg/skyline.svg' %>
+    <div class='sunrise1'>
+      <a href='#' name='sunrise1'></a>
+      <div class='title'>
+        <div class='logo'>
+          <%= image_tag 'logo.png' %>
+        </div>
+      </div>
+      <div class='skyline'>
+        <%= render 'svg/skyline.svg' %>
+      </div>
+    </div>
+
+    <div class='sunrise2'>
+      <a href='#' name='sunrise2'></a>
+      <div class='aspen'>
+        <%= render 'svg/aspen.svg' %>
+      </div>
+      <div class='taneger-fly-space'>
+        <div class='taneger'>
+          <%= render 'svg/taneger.svg' %>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class='information'>
-    <div class='blurb'>
-      <%= scroll_reveal content: 'Ooolation is a creative space for musicians to gather, share and collaborate.', animation: 'enter left and move 50px over 1.33s' %>
+  <div class='information1'>
+    <a href='#' name='information1'></a>
+    <div id='blurb1' class='fades-in'>
+      Ooolation is a <strong>creative incubator</strong> for musicians and artists.
     </div>
-    <div class='blurb'>
-      <%= scroll_reveal content: 'We gather each year in the Eastern Sierra Nevada mountains to rehearse and perform.', animation: 'enter left and move 50px over 1.33s' %>
+    <div id='blurb2' class='fades-in'>
+      Every year we gather in the Eastern Sierra to collaborate and rehearse.
+    </div>
+    <div id='blurb3' class='fades-in'>
+      Our colorful themes center around the stewardship of nature.
+    </div>
+    <div id='blurb4' class='fades-in'>
+      The week culminates in several amazing performances.
+    </div>
+  </div>
+  <div class='information2'>
+    <a href='#' name='information2'></a>
+    <div id='blurb5' class='fades-in'>
+      We need <strong>your help</strong> to continue bringing these messages to our vulnerable world.
     </div>
   </div>
 </div>
+
+<script>
+function scrollTo(offset){
+  $('html,body').animate(
+    {
+      scrollTop: offset
+    },
+    'slow'
+  );
+}
+
+var sunrise1 = $('a[name="sunrise1"]').offset().top;
+var sunrise2 = $('a[name="sunrise2"]').offset().top;
+var information1 = $('a[name="information1"]').offset().top;
+var information2 = $('a[name="information2"]').offset().top;
+var scrollPos = 0;
+
+$(window).ready(function(){
+  $(window).scroll(function() {
+    scrollPos = $(this).scrollTop();
+    if (scrollPos > sunrise1 + 5) {
+      if (scrollPos > sunrise2) {
+        $(".title").css("top", "-400px")
+        $(".taneger").addClass('fly');
+        $(".skyline").css("top", "-400px");
+        $(".aspen").css("top", "-700px");
+        $("#blurb1").css('opacity', '1');
+        if (scrollPos > information1) {
+          if (scrollPos > information2) {
+            document.location.href = "/funds";
+            $(this).scrollTop(0);
+          }
+        } else {
+
+        }
+      } else {
+        $(".title").css("top", "20px")
+        $(".taneger").removeClass('fly');
+        $(".skyline").css("top", "200px");
+        $(".aspen").css("top", "300px");
+        $("#blurb1").css('opacity', '0');
+      }
+    } else {
+
+    }
+  });
+});
+</script>

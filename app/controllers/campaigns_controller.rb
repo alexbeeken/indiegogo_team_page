@@ -1,9 +1,5 @@
 class CampaignsController < ApplicationController
-  def index
-    @snapshot = ProjectSnapshot.latest
-  end
-
-  def sunrise
+  def funds
     @snapshot = ProjectSnapshot.latest
   end
 end

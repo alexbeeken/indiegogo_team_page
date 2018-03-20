@@ -1,35 +1,10 @@
-<div class='sunrise'>
-</div>
-<div class='title'>
-  <div class='logo'>
-    <%= image_tag 'logo.png' %>
-  </div>
-  <div class='subtitle'>
-    a creative incubator of kaleidoscopic voices
-  </div>
-</div>
-
-<div class='nature'>
-  <div class='skyline'>
-    <%= render 'svg/skyline.svg' %>
-  </div>
-  <div class='information'>
-    <div class='blurb'>
-      <%= scroll_reveal content: 'Ooolation is a creative space for musicians to gather, share and collaborate.', animation: 'enter left and move 50px over 1.33s' %>
-    </div>
-    <div class='blurb'>
-      <%= scroll_reveal content: 'We gather each year in the Eastern Sierra Nevada mountains to rehearse and perform.', animation: 'enter left and move 50px over 1.33s' %>
-    </div>
-  </div>
-  <div class='aspen'>
-    <%= render 'svg/aspen.svg' %>
-  </div>
-  <div class='taneger-fly-space'>
-    <div class='taneger'>
-      <%= render 'svg/taneger.svg' %>
-    </div>
-  </div>
-</div>
+<script>
+$(document).ready(function(){
+  var scroll_pos = 0;
+  $(document).scroll(function() {
+  });
+});
+</script>
 
 <div class='progress'>
   <div class='progress-bar'>
@@ -83,4 +58,3 @@
       </div>
     </a>
   <% end %>
-</div>

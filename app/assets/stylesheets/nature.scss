@@ -1,80 +1,107 @@
 @-webkit-keyframes fly {
-  0%   { transform: scale(0.8, 0.8); left: -20%; bottom: -130px; }
-  10%   { bottom: -130px; }
-  30%   { bottom: -100px; }
-  100% { transform: scale(0.3, 0.3); left: 100%; bottom: -10px; opacity: 0;}
+  0%  { transform: scale(0.3, 0.3); left: -50%; top: 300px; }
+  100% { transform: scale(0.8, 0.8); left: 100%; top: 200px; }
 }
 @-moz-keyframes fly {
-  0%   { transform: scale(0.8, 0.8); left: -20%; bottom: -130px; }
-  10%   { bottom: -130px; }
-  30%   { bottom: -100px; }
-  100% { transform: scale(0.3, 0.3); left: 100%; bottom: -10px; opacity: 0;}
+  0%  { transform: scale(0.3, 0.3); left: -50%; top: 300px; }
+  100% { transform: scale(0.8, 0.8); left: 100%; top: 200px; }
 }
 @-o-keyframes fly {
-  0%   { transform: scale(0.8, 0.8); left: -20%; bottom: -130px; }
-  10%   { bottom: -130px; }
-  30%   { bottom: -100px; }
-  100% { transform: scale(0.3, 0.3); left: 100%; bottom: -10px; opacity: 0;}
+  0%  { transform: scale(0.3, 0.3); left: -50%; top: 300px; }
+  100% { transform: scale(0.8, 0.8); left: 100%; top: 200px; }
 }
 @keyframes fly {
-  0%   { left: -20%; bottom: -130px; }
-  50%  { transform: scale(0.8, 0.8); left: -20%; bottom: -130px; }
-  60%  { bottom: -130px; }
-  80%  { bottom: -100px; }
-  100% { transform: scale(0.3, 0.3); left: 100%; bottom: -10px; }
+  0%  { transform: scale(0.3, 0.3); left: -50%; top: 300px; }
+  100% { transform: scale(0.8, 0.8); left: 100%; top: 200px; }
 }
 
 .nature {
   overflow: hidden;
+  .aspen {
+    position: fixed;
+    width: 50%;
+    z-index: 50;
+    top: 300px;
+    transition: top 1s, left 1s;
+  }
 
   .skyline {
     position: fixed;
-    z-index: 0;
-    top: 20vh;
+    z-index: 10;
+    top: 200px;
     width: 100%;
+    transition: top 1s;
   }
 
-  .information {
-    position: absolute;
-    z-index: 100;
-    text-align: center;
-    margin-top: 600px;
-    width: 100%;
-    font-family: 'main';
-    font-weight: bold;
-    font-size: 19px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 3000px;
-    .blurb {
-      margin-top: 500px;
-      font-size: 2em;
-    }
+  .sunrise1 {
+    height: 2000px;
+  }
+
+  .sunrise2 {
+    height: 2000px;
   }
 
   .taneger-fly-space {
-    position: absolute;
+    position: fixed;
+    z-index: 10;
     top: 200px;
     width: 100%;
     height: 600px;
     overflow: hidden;
     .taneger {
+      overflow: hidden;
+      position: fixed;
       left: -20%;
-      bottom: -130px;
-      position: relative;
-      z-index: 0;
-      width: 150px;
-      animation: fly 4s 1 linear forwards;
-      -moz-animation: fly 4s 1 linear forwards; /* Firefox */
-      -webkit-animation: fly 4s 1 linear forwards; /* Safari and Chrome */
-      -o-animation: fly 4s 1 linear forwards; /* Opera */
     }
   }
+  .fly {
+    animation: fly 2s 1 linear forwards;
+    -moz-animation: fly 2s 1 linear forwards; /* Firefox */
+    -webkit-animation: fly 2s 1 linear forwards; /* Safari and Chrome */
+    -o-animation: fly 2s 1 linear forwards; /* Opera */
+  }
+}
 
+.information {
+  height: 2000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  #blurb1 {
+    top: 100px;
+  }
+  #blurb2 {
+    top: 200px;
+  }
+  #blurb3 {
+    top: 300px;
+  }
+  #blurb4 {
+    top: 400px;
+  }
+  #blurb5 {
+    top: 200px;
+  }
+  .fades-in {
+    font-family: 'main';
+    text-align: center;
+    width: 600px;
+    margin-left: 100px;
+    opacity: 0;
+    top: 200px;
+    position: fixed;
+    z-index: 100;
+    font-size: 2em;
+    transition: opacity 1s;
+    -moz-transition: opacity 1s; /* Firefox */
+    -webkit-transition: opacity 1s; /* Safari and Chrome */
+    -o-transition: opacity 1s; /* Opera */
+  }
+}
+
+@media (max-width: 1200px) {
   .aspen {
-    position: relative;
-    z-index: 10;
+    width: 200px;
   }
 }
