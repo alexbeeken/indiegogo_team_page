@@ -45,6 +45,19 @@
     top: -50vh
   }
 
+  .sun {
+    position: fixed;
+    z-index: 9;
+    width: 30vw;
+    top: 50vh;
+    left: 70vw;
+    transition: top 4s;
+  }
+
+  .sun-up {
+    top: 20vh;
+  }
+
   .sunrise1 {
     height: 5000px;
   }

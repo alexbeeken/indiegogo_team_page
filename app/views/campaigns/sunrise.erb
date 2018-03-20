@@ -11,6 +11,10 @@
         <%= render 'svg/skyline.svg' %>
       </div>
     </div>
+
+    <div class='sun'>
+      <%= render 'svg/sun.svg' %>
+    </div>
     <div class='aspen'>
       <%= render 'svg/aspen.svg' %>
     </div>
@@ -86,8 +90,10 @@ $(window).ready(function(){
                 $("#blurb2").css('opacity', '0');
                 $("#blurb3").css('opacity', '0');
                 $("#blurb4").css('opacity', '0');
+                $(".sun").addClass('sun-up');
                 $("#blurb5").css('opacity', '1');
               } else {
+                $(".sun").removeClass('sun-up');
                 $("#blurb5").css('opacity', '0');
               }
             }
