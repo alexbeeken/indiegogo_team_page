@@ -1,41 +1,70 @@
 $raised-color: #6a8751;
 $togo-color: #bc9f76;
 
-.progress {
-  .progress-bar {
-    height: 20px;
-    min-width: 300px;
-    display: flex;
-    flex-direction: row;
-    background-color: $togo-color;
-    border-radius: 10px;
-    overflow: hidden;
-    .raised {
-      background-color: $raised-color;
-      border-radius: 0px;
+.funds {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(white, #8fbfef);
+  .funds-titles {
+    width: 100%;
+    font-family: 'main';
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 3.7vh;
+    margin-top: 4vh;
+    .funds-title {
+      font-size: 4em;
+      margin-bottom: 1vh;
+    }
+    .funds-subtitle {
+      font-size: 1.3em;
+      margin-bottom: 1.5vh;
+    }
+    .funds-subtitle-link {
+      font-size: 1.3em;
     }
   }
-  .progress-numbers {
-    margin-top: 20px;
-    font-family: 'numbers';
-    font-weight: bold;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    font-size: 30px;
-    font-weight: bold;
-    .of {
-      font-size: 25px;
+  .progress {
+    min-width: 40%;
+    max-width: 800px;
+    margin: auto;
+    .progress-bar {
+      height: 20px;
+      min-width: 300px;
+      max-width: 800px;
+      display: flex;
+      flex-direction: row;
+      background-color: $togo-color;
+      border-radius: 10px;
+      overflow: hidden;
+      .raised {
+        background-color: $raised-color;
+        border-radius: 0px;
+      }
     }
-    .goal {
-      color: $togo-color;
-      margin-left: 5px;
-    }
-    .raised {
-      color: $raised-color;
-      margin-right: 5px;
+    .progress-numbers {
+      margin-top: 20px;
+      font-family: 'numbers';
+      font-weight: bold;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      font-size: 30px;
+      font-weight: bold;
+      .of {
+        font-size: 25px;
+      }
+      .goal {
+        color: $togo-color;
+        margin-left: 5px;
+      }
+      .raised {
+        color: $raised-color;
+        margin-right: 5px;
+      }
     }
   }
 }

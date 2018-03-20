@@ -1,60 +1,69 @@
-<script>
-$(document).ready(function(){
-  var scroll_pos = 0;
-  $(document).scroll(function() {
-  });
-});
-</script>
+<div class='funds'>
+  <div class='funds-titles'>
+    <div class='funds-title'>
+      Support Ooolation!
+    </div>
 
-<div class='progress'>
-  <div class='progress-bar'>
-    <div class='raised' style=<%="width:#{@snapshot.percent_raised};#{@raised_extra_styles}"%>>
+    <div class='funds-subtitle'>
+      Choose a singer to donate
+    </div>
+    <div class='funds-subtitle-link'>
+      <strong>
+        <%= link_to "learn more", root_path %>
+      </strong>
     </div>
   </div>
-  <div class='progress-numbers'>
-    <div class='raised'>
-      <%= @snapshot.raised %>
+
+  <div class='progress'>
+    <div class='progress-bar'>
+      <div class='raised' style=<%="width:#{@snapshot.percent_raised};#{@raised_extra_styles}"%>>
+      </div>
     </div>
-    <div class='of'>
-      of
-    </div>
-    <div class='goal'>
-      <%= @snapshot.goal %>
+    <div class='progress-numbers'>
+      <div class='raised'>
+        <%= @snapshot.raised %>
+      </div>
+      <div class='of'>
+        of
+      </div>
+      <div class='goal'>
+        <%= @snapshot.goal %>
+      </div>
     </div>
   </div>
-</div>
 
-<div class='campaigns'>
-  <% Campaign.all.each do |campaign| %>
-    <a href="http://www.indiegogo.com/#{campaign.slug}">
-      <div class='campaign' style=<%="background-image:url(#{campaign.image_url})" %>>
-        <div class='campaign-spacer'>
-        </div>
-        <div class='raised-spacer'>
-          <div class='raised-numbers'>
-            <%= campaign.display_raised %> raised
+  <div class='campaigns'>
+    <% Campaign.all.each do |campaign| %>
+      <a href="http://www.indiegogo.com/#{campaign.slug}">
+        <div class='campaign' style=<%="background-image:url(#{campaign.image_url})" %>>
+          <div class='campaign-spacer'>
+          </div>
+          <div class='raised-spacer'>
+            <div class='raised-numbers'>
+              <%= campaign.display_raised %> raised
+            </div>
           </div>
         </div>
-      </div>
-      <div class='raised-circle'>
-        <svg viewbox="0 0 36.8 36.8" class="circular-chart">
-          <path class="circle"
-            stroke-dasharray=<%= "#{campaign.integer_percent_raised},100" %>
-            d="M18 2.0845
-              a 15.9155 15.9155 0 0 1 0 31.831
-              a 15.9155 15.9155 0 0 1 0 -31.831"
-          />
-        </svg>
-      </div>
-      <div class='raised-circle togo-circle'>
-        <svg viewbox="0 0 36.8 36.8" class="circular-chart">
-          <path class="circle togo"
-            stroke-dasharray=<%= "100,100" %>
-            d="M18 2.0845
-              a 15.9155 15.9155 0 0 1 0 31.831
-              a 15.9155 15.9155 0 0 1 0 -31.831"
-          />
-        </svg>
-      </div>
-    </a>
-  <% end %>
+        <div class='raised-circle'>
+          <svg viewbox="0 0 36.8 36.8" class="circular-chart">
+            <path class="circle"
+              stroke-dasharray=<%= "#{campaign.integer_percent_raised},100" %>
+              d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831"
+            />
+          </svg>
+        </div>
+        <div class='raised-circle togo-circle'>
+          <svg viewbox="0 0 36.8 36.8" class="circular-chart">
+            <path class="circle togo"
+              stroke-dasharray=<%= "100,100" %>
+              d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831"
+            />
+          </svg>
+        </div>
+      </a>
+    <% end %>
+</div>
