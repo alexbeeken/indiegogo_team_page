@@ -19,10 +19,16 @@
   overflow: hidden;
   .aspen {
     position: fixed;
-    width: 60vw;
+    width: 450px;
     z-index: 50;
-    top: 20vh;
+    top: 200px;
     transition: top 1s, left 1s;
+  }
+  .tree-up {
+    top: -200px;
+  }
+  .tree-up-up {
+    top: -1200px;
   }
 
   .skyline {
@@ -31,6 +37,12 @@
     top: 20vh;
     width: 100%;
     transition: top 1s;
+  }
+  .sky-up {
+    top: -30vh
+  }
+  .sky-up-up {
+    top: -50vh
   }
 
   .sunrise1 {
