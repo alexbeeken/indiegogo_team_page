@@ -43,7 +43,6 @@
     width: 70%;
     z-index: 50;
     top: 200px;
-    transition: top 1s, left 1s;
   }
   .tree-up {
     top: -200px;
@@ -57,6 +56,10 @@
     z-index: 10;
     top: 26vh;
     width: 100%;
+    o-transition: top 1s; /* Opera */
+    -moz-transition: top 1s; /* Firefox */
+    -webkit-transition: top 1s;
+    -webkit-backface-visibility: hidden;
     transition: top 1s;
   }
   .sky-up {
@@ -72,6 +75,11 @@
     width: 30vw;
     top: 50vh;
     left: 70vw;
+    o-transition: top 4s; /* Opera */
+    -moz-transition: top 4s; /* Firefox */
+    -webkit-transition: top 4s;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
     transition: top 4s;
   }
 
@@ -97,10 +105,11 @@
     }
   }
   .fly {
-    animation: fly 2s 1 linear forwards;
     -moz-animation: fly 2s 1 linear forwards; /* Firefox */
-    -webkit-animation: fly 2s 1 linear forwards; /* Safari and Chrome */
     -o-animation: fly 2s 1 linear forwards; /* Opera */
+    -webkit-animation: fly 2s 1 linear forwards; /* Safari and Chrome */
+    -webkit-backface-visibility: hidden;
+    animation: fly 2s 1 linear forwards;
   }
 }
 
@@ -125,6 +134,10 @@
     height: 100px;
   }
   #scrolldown {
+    -moz-animation: bounce 0.8s infinite; /* Firefox */
+    -o-animation: bounce 0.8s infinite; /* Opera */
+    -webkit-animation: bounce 0.8s infinite; /* Safari and Chrome */
+    -webkit-backface-visibility: hidden;
     animation: bounce 0.8s infinite;
     font-size: 3em;
     top: 60%;
@@ -158,10 +171,11 @@
     top: 200px;
     position: fixed;
     z-index: 100;
-    transition: opacity 1s;
     -moz-transition: opacity 1s; /* Firefox */
-    -webkit-transition: opacity 1s; /* Safari and Chrome */
     -o-transition: opacity 1s; /* Opera */
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: opacity 1s; /* Safari and Chrome */
+    transition: opacity 1s;
   }
 }
 
