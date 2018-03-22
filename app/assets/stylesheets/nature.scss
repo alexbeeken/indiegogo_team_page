@@ -171,11 +171,11 @@
     top: 200px;
     position: fixed;
     z-index: 100;
-    -moz-transition: opacity 1s; /* Firefox */
-    -o-transition: opacity 1s; /* Opera */
+    -moz-transition: opacity 0.4s; /* Firefox */
+    -o-transition: opacity 0.4s; /* Opera */
     -webkit-transform-style: preserve-3d;
-    -webkit-transition: opacity 1s; /* Safari and Chrome */
-    transition: opacity 1s;
+    -webkit-transition: opacity 0.4s; /* Safari and Chrome */
+    transition: opacity 0.4s;
   }
 }
 

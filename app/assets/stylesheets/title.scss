@@ -3,11 +3,11 @@
   z-index: 5;
   width: 100%;
   top: 5vh;
-  -o-transition: top 1s; /* Opera */
-  -moz-transition: top 1s; /* Firefox */
-  -webkit-transition: top 1s;
+  -o-transition: top 0.8s; /* Opera */
+  -moz-transition: top 0.8s; /* Firefox */
+  -webkit-transition: top 0.8s;
   -webkit-backface-visibility: hidden;
-  transition: top 1s;
+  transition: top 0.8s;
   .logo {
     display: flex;
     align-items: center;
