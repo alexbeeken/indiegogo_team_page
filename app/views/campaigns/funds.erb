@@ -34,7 +34,7 @@
 
   <div class='campaigns'>
     <% Campaign.all.each do |campaign| %>
-      <a href="http://www.indiegogo.com/#{campaign.slug}">
+      <a href=<%= "http://www.indiegogo.com/projects/#{campaign.slug}" %>>
         <div class='campaign' style=<%="background-image:url(#{campaign.image_url})" %>>
           <div class='campaign-spacer'>
           </div>
