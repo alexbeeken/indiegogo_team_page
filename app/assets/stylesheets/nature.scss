@@ -40,7 +40,7 @@
   overflow: hidden;
   .aspen {
     position: fixed;
-    width: 450px;
+    width: 70%;
     z-index: 50;
     top: 200px;
     transition: top 1s, left 1s;
@@ -55,7 +55,7 @@
   .skyline {
     position: fixed;
     z-index: 10;
-    top: 20vh;
+    top: 26vh;
     width: 100%;
     transition: top 1s;
   }
@@ -127,7 +127,7 @@
   #scrolldown {
     animation: bounce 0.8s infinite;
     font-size: 3em;
-    top: 500px;
+    top: 60%;
   }
   #blurb1 {
     top: 100px;
