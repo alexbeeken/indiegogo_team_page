@@ -85,32 +85,36 @@ $(window).ready(function(){
         $(".taneger").addClass('fly');
         $("#blurb1").css('opacity', '1');
         if (scrollPos > blurb2) {
+          $("#blurb1").css('opacity', '0');
           $("#blurb2").css('opacity', '1');
           if (scrollPos > blurb3) {
+            $("#blurb2").css('opacity', '0');
             $("#blurb3").css('opacity', '1');
             if (scrollPos > blurb4) {
+              $("#blurb3").css('opacity', '0');
               $("#blurb4").css('opacity', '1');
               if (scrollPos > blurb5) {
-                $("#blurb1").css('opacity', '0');
-                $("#blurb2").css('opacity', '0');
-                $("#blurb3").css('opacity', '0');
                 $("#blurb4").css('opacity', '0');
                 $(".sun").addClass('sun-up');
                 $("#blurb5").css('opacity', '1');
               } else {
                 $("#blurb5").css('opacity', '0');
               }
+            } else {
+              $("#blurb3").css('opacity', '1');
+              $("#blurb4").css('opacity', '0');
             }
+          } else {
+            $("#blurb2").css('opacity', '1');
+            $("#blurb3").css('opacity', '0');
           }
+        } else {
+          $("#blurb1").css('opacity', '1');
+          $("#blurb2").css('opacity', '0');
         }
       } else {
         $("#blurb1").css('opacity', '0');
-        $("#blurb2").css('opacity', '0');
-        $("#blurb3").css('opacity', '0');
-        $("#blurb4").css('opacity', '0');
-        $("#blurb5").css('opacity', '0');
         $(".taneger").removeClass('fly');
-        $("#blurb1").css('opacity', '0');
       }
     } else {
       $("#scrolldown").css('opacity', '1');

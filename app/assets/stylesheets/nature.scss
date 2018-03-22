@@ -54,7 +54,7 @@
   .skyline {
     position: fixed;
     z-index: 10;
-    top: 26vh;
+    top: 22vh;
     width: 100%;
     o-transition: top 1s; /* Opera */
     -moz-transition: top 1s; /* Firefox */
@@ -142,33 +142,18 @@
     font-size: 3em;
     top: 60%;
   }
-  #blurb1 {
-    top: 5vh;
-  }
-  #blurb2 {
-    top: 25vh;
-  }
-  #blurb3 {
-    top: 45vh;
-  }
-  #blurb4 {
-    top: 65vh;
-  }
-  #blurb5 {
-    top: 25vh;
-  }
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   .fades-in {
+    top: 10vh;
     font-size: 2em;
     text-align: center;
     font-family: 'main';
     text-align: center;
     width: 100%;
     opacity: 0;
-    top: 200px;
     position: fixed;
     z-index: 100;
     -moz-transition: opacity 0.4s; /* Firefox */
