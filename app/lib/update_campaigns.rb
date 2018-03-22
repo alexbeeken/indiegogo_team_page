@@ -45,8 +45,9 @@ class UpdateCampaigns
     end
 
     def get_campaigns
-      ids = ENV['TEAM_IDS'].split(',').map { |s| s.to_i }
-      uri = URI("https://api.indiegogo.com/2/campaigns.json?id=#{ids}&api_token=#{ENV['API_TOKEN']}")
+      ids_params = (ENV['TEAM_IDS'].split(',').map { |s| "ids[]=#{s}&" }).join
+      uri = URI("https://api.indiegogo.com/2/campaigns.json?#{ids_params}api_token=#{ENV['API_TOKEN']}")
+      binding.pry
       res = Net::HTTP.get(uri)
 
       JSON.parse(res)['response']
