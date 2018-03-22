@@ -162,6 +162,24 @@
     -webkit-transition: opacity 0.4s; /* Safari and Chrome */
     transition: opacity 0.4s;
   }
+
+}
+.sign {
+  position: fixed;
+  z-index: 51;
+  bottom: -60px;
+  right: -600px;
+  width: 40%;
+  min-width: 300px;
+  -moz-transition: right 0.7s; /* Firefox */
+  -o-transition: right 0.7s; /* Opera */
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: right 0.7s; /* Safari and Chrome */
+  transition: right 0.7s;
+}
+
+.sign-up {
+  right: 10%;
 }
 
 @media (max-width: 1200px) {

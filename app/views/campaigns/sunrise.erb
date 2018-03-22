@@ -54,6 +54,13 @@
        to continue bringing these messages to our vulnerable world.
     </div>
   </div>
+
+  <div class='sign'>
+    <%= render 'svg/sign.svg' %>
+    <div class='sign-text'>
+      
+    </div>
+  </div>
 </div>
 
 <script>
@@ -97,8 +104,10 @@ $(window).ready(function(){
                 $("#blurb4").css('opacity', '0');
                 $(".sun").addClass('sun-up');
                 $("#blurb5").css('opacity', '1');
+                $(".sign").addClass('sign-up');
               } else {
                 $("#blurb5").css('opacity', '0');
+                $(".sign").removeClass('sign-up');
               }
             } else {
               $("#blurb3").css('opacity', '1');
