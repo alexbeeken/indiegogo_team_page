@@ -1,22 +1,9 @@
 class UpdateCampaigns
   class << self
-    TEAM_IDS = [
-      1057016,
-      1034275,
-      1034336,
-      991441,
-      875862,
-      1003754,
-      827734,
-      1051999,
-      942524
-    ]
-
     def run
-      objects = JSON.parse(File.open("./app/lib/0.txt", "rb").read)["response"]
-      # response = Net::HTTP.get(URI("https://api.indiegogo.com/2/campaigns.json?id=#{TEAM_IDS}"))
+      objects = get_campaigns
       objects.each do |object|
-        id = object["id"].to_i
+        id = object["id"]
         campaign = Campaign.find_by(igg_id: id)
         raised = object["collected_funds"]
         goal = object["goal"]
@@ -55,6 +42,14 @@ class UpdateCampaigns
 
     def calculate_percent_togo(percent_raised)
       100.0 - percent_raised
+    end
+
+    def get_campaigns
+      ids = ENV['TEAM_IDS'].split(',').map { |s| s.to_i }
+      uri = URI("https://api.indiegogo.com/2/campaigns.json?id=#{ids}&api_token=#{ENV['API_TOKEN']}")
+      res = Net::HTTP.get(uri)
+
+      JSON.parse(res)['response']
     end
   end
 end
