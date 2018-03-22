@@ -78,6 +78,13 @@ var scrollPos = 0;
 
 $(window).ready(function(){
   $("#scrolldown").css('opacity', '1');
+  $(".sign").removeClass('sign-up');
+  $("#blurb1").css('opacity', '0');
+  $("#blurb2").css('opacity', '0');
+  $("#blurb3").css('opacity', '0');
+  $("#blurb4").css('opacity', '0');
+  $("#blurb5").css('opacity', '0');
+  $(this).scrollTop(0);
   $(window).scroll(function() {
     scrollPos = $(this).scrollTop();
     if (scrollPos > sunrise1) {
