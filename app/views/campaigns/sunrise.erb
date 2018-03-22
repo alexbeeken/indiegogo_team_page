@@ -30,6 +30,9 @@
     <div class='blurb2'><a href='#' name='blurb2'></a></div>
     <div class='blurb3'><a href='#' name='blurb3'></a></div>
     <div class='blurb4'><a href='#' name='blurb4'></a></div>
+    <div id='scrolldown' class='fades-in'>
+      Scroll down to see more! <br>↓
+    </div>
     <div id='blurb1' class='fades-in'>
       Ooolation is a <strong>creative incubator</strong> for musicians and artists.
     </div>
@@ -72,9 +75,11 @@ var blurb5 = $('a[name="blurb5"]').offset().top;
 var scrollPos = 0;
 
 $(window).ready(function(){
+  $("#scrolldown").css('opacity', '1');
   $(window).scroll(function() {
     scrollPos = $(this).scrollTop();
     if (scrollPos > sunrise1) {
+      $("#scrolldown").css('opacity', '0');
       $(".title").css("top", "-20vh")
       if (scrollPos > blurb1) {
         $(".taneger").addClass('fly');
@@ -109,6 +114,7 @@ $(window).ready(function(){
         $("#blurb1").css('opacity', '0');
       }
     } else {
+      $("#scrolldown").css('opacity', '1');
       $(".title").css("top", "5vh")
     }
   });
