@@ -29,36 +29,58 @@
 <?xpacket end="w"?></metadata>
 <defs>
     <style>
-      .scls-1 {
+      .signcls-1 {
         fill: #241f38;
         stroke: #000;
-        fill-rule: evenodd;
       }
 
-      .scls-1, .scls-3 {
+      .signcls-1, .signcls-3 {
         stroke-width: 3px;
       }
 
-      .scls-2 {
+      .signcls-1, .signcls-5 {
+        fill-rule: evenodd;
+      }
+
+      .signcls-2 {
         fill: #8c643b;
       }
 
-      .scls-3 {
+      .signcls-3 {
         fill: none;
         stroke: #241f38;
+      }
+
+      .signcls-4 {
+        font-size: 120px;
+        text-anchor: middle;
+        font-family: SignPainter-HouseScript, SignPainter;
+      }
+
+      .signcls-4, .signcls-5 {
+        fill: #e0c322;
+      }
+
+      .signcls-5 {
+        stroke: #e0c322;
+        stroke-width: 10px;
       }
     </style>
   </defs>
   <g id="Artboard_1" data-name="Artboard 1">
-    <path class="scls-1" d="M403,155h4v16h-4V155Z" transform="translate(-128 -55)"/>
-    <path id="Shape_1_copy" data-name="Shape 1 copy" class="scls-1" d="M829,154h4v16h-4V154Z" transform="translate(-128 -55)"/>
-    <rect class="scls-2" width="1012" height="43"/>
-    <rect class="scls-2" x="47" y="40" width="54" height="805"/>
-    <rect id="Rectangle_15_copy" data-name="Rectangle 15 copy" class="scls-2" x="896" y="40" width="54" height="805"/>
-    <ellipse id="chain2" class="scls-3" cx="277" cy="57.5" rx="15" ry="17.5"/>
-    <ellipse id="chain1" class="scls-3" cx="277" cy="84.5" rx="15" ry="17.5"/>
-    <ellipse id="chain2_copy" data-name="chain2 copy" class="scls-3" cx="704" cy="57.5" rx="15" ry="17.5"/>
-    <ellipse id="chain1_copy" data-name="chain1 copy" class="scls-3" cx="704" cy="84.5" rx="15" ry="17.5"/>
-    <rect class="scls-2" x="179" y="115" width="645" height="358"/>
+    <path class="signcls-1" d="M403,155h4v16h-4V155Z" transform="translate(-128 -55)"/>
+    <path id="Shape_1_copy" data-name="Shape 1 copy" class="signcls-1" d="M829,154h4v16h-4V154Z" transform="translate(-128 -55)"/>
+    <rect class="signcls-2" width="1012" height="43"/>
+    <rect class="signcls-2" x="47" y="40" width="54" height="805"/>
+    <rect id="Rectangle_15_copy" data-name="Rectangle 15 copy" class="signcls-2" x="896" y="40" width="54" height="805"/>
+    <ellipse id="chain2" class="signcls-3" cx="277" cy="57.5" rx="15" ry="17.5"/>
+    <ellipse id="chain1" class="signcls-3" cx="277" cy="84.5" rx="15" ry="17.5"/>
+    <ellipse id="chain2_copy" data-name="chain2 copy" class="signcls-3" cx="704" cy="57.5" rx="15" ry="17.5"/>
+    <ellipse id="chain1_copy" data-name="chain1 copy" class="signcls-3" cx="704" cy="84.5" rx="15" ry="17.5"/>
+    <rect class="signcls-2" x="179" y="115" width="645" height="358"/>
+    <text id="SEE_HOW_" data-name="SEE HOW " class="signcls-4" x="508.265" y="288.133">SEE HOW </text>
+    <path class="signcls-5" d="M439,429v-9H809v9H439Z" transform="translate(-128 -55)"/>
+    <path id="Shape_2_copy" data-name="Shape 2 copy" class="signcls-5" d="M768.306,392.623l6.372-6.355,36.016,36.109-6.372,6.355Z" transform="translate(-128 -55)"/>
+    <path id="Shape_2_copy_2" data-name="Shape 2 copy 2" class="signcls-5" d="M802.4,420.323l6.348,6.379L772.6,462.677l-6.348-6.379Z" transform="translate(-128 -55)"/>
   </g>
 </svg>

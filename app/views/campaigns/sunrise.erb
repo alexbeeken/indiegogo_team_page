@@ -47,19 +47,14 @@
     </div>
     <div class='blurb5'><a href='#' name='blurb5'></a></div>
     <div id='blurb5' class='fades-in'>
-      We need
-      <strong>
-      <%= link_to "your help", funds_path %>
-      </strong>
-       to continue bringing these messages to our vulnerable world.
+      We need your help to continue bringing these messages to our vulnerable world.
     </div>
   </div>
 
   <div class='sign'>
-    <%= render 'svg/sign.svg' %>
-    <div class='sign-text'>
-      
-    </div>
+    <%= link_to funds_path do %>
+      <%= render 'svg/sign.svg' %>
+    <% end %>
   </div>
 </div>
 

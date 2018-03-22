@@ -139,6 +139,7 @@
     -webkit-animation: bounce 0.8s infinite; /* Safari and Chrome */
     -webkit-backface-visibility: hidden;
     animation: bounce 0.8s infinite;
+    z-index: 51;
     font-size: 3em;
     top: 60%;
   }
@@ -166,24 +167,40 @@
 }
 .sign {
   position: fixed;
-  z-index: 51;
-  bottom: -60px;
-  right: -600px;
+  z-index: 52;
+  bottom: -30px;
+  left: -600px;
   width: 40%;
   min-width: 300px;
-  -moz-transition: right 0.7s; /* Firefox */
-  -o-transition: right 0.7s; /* Opera */
+  -moz-transition: left 0.7s; /* Firefox */
+  -o-transition: left 0.7s; /* Opera */
   -webkit-transform-style: preserve-3d;
-  -webkit-transition: right 0.7s; /* Safari and Chrome */
-  transition: right 0.7s;
+  -webkit-transition: left 0.7s; /* Safari and Chrome */
+  transition: left 0.7s;
+  .sign-text {
+    position: relative;
+    bottom: 300px;
+    z-index: 53;
+    text-shadow: 2px 2px gray;
+    a {
+      font-size: 2em;
+      font-family: 'numbers';
+      text-decoration: none;
+      color: #f4df42;
+    }
+  }
 }
 
 .sign-up {
-  right: 10%;
+  left: 50%;
 }
+
 
 @media (max-width: 1200px) {
   .aspen {
     width: 200px;
+  }
+  .sign-up {
+    left: 10%;
   }
 }
