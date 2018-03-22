@@ -105,11 +105,11 @@
     }
   }
   .fly {
-    -moz-animation: fly 2s 1 linear forwards; /* Firefox */
-    -o-animation: fly 2s 1 linear forwards; /* Opera */
-    -webkit-animation: fly 2s 1 linear forwards; /* Safari and Chrome */
+    -moz-animation: fly 3.5s 1 linear forwards; /* Firefox */
+    -o-animation: fly 3.5s 1 linear forwards; /* Opera */
+    -webkit-animation: fly 3.5s 1 linear forwards; /* Safari and Chrome */
     -webkit-backface-visibility: hidden;
-    animation: fly 2s 1 linear forwards;
+    animation: fly 3.5s 1 linear forwards;
   }
 }
 
@@ -143,19 +143,19 @@
     top: 60%;
   }
   #blurb1 {
-    top: 100px;
+    top: 10vh;
   }
   #blurb2 {
-    top: 220px;
+    top: 30vh;
   }
   #blurb3 {
-    top: 340px;
+    top: 50vh;
   }
   #blurb4 {
-    top: 460px;
+    top: 70vh;
   }
   #blurb5 {
-    top: 200px;
+    top: 30vh;
   }
   display: flex;
   justify-content: center;
