@@ -2,135 +2,119 @@
   <div class='nature'>
     <div class='sunrise1'>
       <a href='#' name='sunrise1'></a>
-      <div class='title'>
-        <div class='logo'>
-          <%= image_tag 'logo.png' %>
+      <div class='skyline'>
+        <div class='title'>
+          <div class='logo'>
+            Ooolite Song Kitchen
+          </div>
+          <div class='subtitle'>
+            awaits
+          </div>
+        </div>
+        <div class='chorus'>
+          <div class='singer male sway'>
+            <%= render 'svg/male1.svg' %>
+          </div>
+          <div class='singer female sway'>
+            <%= render 'svg/female1.svg' %>
+          </div>
+          <div class='singer male sway'>
+            <%= render 'svg/male2.svg' %>
+          </div>
+          <div class='singer female sway'>
+            <%= render 'svg/female2.svg' %>
+          </div>
+          <div class='singer male sway'>
+            <%= render 'svg/male3.svg' %>
+          </div>
+          <div class='singer female sway'>
+            <%= render 'svg/female3.svg' %>
+          </div>
         </div>
       </div>
-      <div class='skyline'>
-        <%= render 'svg/skyline.svg' %>
-      </div>
-    </div>
-
-    <div class='sun'>
-      <%= render 'svg/sun.svg' %>
-    </div>
-    <div class='aspen'>
-      <%= render 'svg/aspen.svg' %>
     </div>
     <div class='taneger-fly-space'>
-      <div class='taneger'>
+      <div class='taneger fly'>
         <%= render 'svg/taneger.svg' %>
       </div>
     </div>
   </div>
-
-  <div class='blurbs'>
-    <div class='blurb1'><a href='#' name='blurb1'></a></div>
-    <div class='blurb2'><a href='#' name='blurb2'></a></div>
-    <div class='blurb3'><a href='#' name='blurb3'></a></div>
-    <div class='blurb4'><a href='#' name='blurb4'></a></div>
-    <div id='scrolldown' class='fades-in'>
-      Scroll down to see more! <br>↓
-    </div>
-    <div id='blurb1' class='fades-in'>
-      Ooolation is a <strong>creative incubator</strong> for musicians and artists.
-    </div>
-    <div id='blurb2' class='fades-in'>
-      Every year we gather in the Eastern Sierra to collaborate and rehearse.
-    </div>
-    <div id='blurb3' class='fades-in'>
-      Our colorful themes center around the stewardship of nature.
-    </div>
-    <div id='blurb4' class='fades-in'>
-      The week culminates in several amazing performances.
-    </div>
-    <div class='blurb5'><a href='#' name='blurb5'></a></div>
-    <div id='blurb5' class='fades-in'>
-      We need your help to continue bringing these messages to our vulnerable world.
-    </div>
-  </div>
-
-  <div class='sign'>
-    <%= link_to funds_path do %>
-      <%= render 'svg/sign.svg' %>
-    <% end %>
-  </div>
 </div>
 
-<script>
-function scrollTo(offset){
-  $('html,body').animate(
-    {
-      scrollTop: offset
-    },
-    'slow'
-  );
-}
+<div class='photo1'>
+  <%= image_tag "photo1" %>
+</div>
 
-var sunrise1 = $('a[name="sunrise1"]').offset().top;
-var blurb1 = $('a[name="blurb1"]').offset().top;
-var blurb2 = $('a[name="blurb2"]').offset().top;
-var blurb3 = $('a[name="blurb3"]').offset().top;
-var blurb4 = $('a[name="blurb4"]').offset().top;
-var blurb5 = $('a[name="blurb5"]').offset().top;
-var scrollPos = 0;
+<div class='photo2'>
+  <%= image_tag "photo2" %>
+</div>
 
-$(window).ready(function(){
-  $("#scrolldown").css('opacity', '1');
-  $(".sign").removeClass('sign-up');
-  $("#blurb1").css('opacity', '0');
-  $("#blurb2").css('opacity', '0');
-  $("#blurb3").css('opacity', '0');
-  $("#blurb4").css('opacity', '0');
-  $("#blurb5").css('opacity', '0');
-  $(this).scrollTop(0);
-  $(window).scroll(function() {
-    scrollPos = $(this).scrollTop();
-    if (scrollPos > sunrise1) {
-      $("#scrolldown").css('opacity', '0');
-      $(".title").css("top", "-20vh")
-      if (scrollPos > blurb1) {
-        $(".taneger").addClass('fly');
-        $("#blurb1").css('opacity', '1');
-        if (scrollPos > blurb2) {
-          $("#blurb1").css('opacity', '0');
-          $("#blurb2").css('opacity', '1');
-          if (scrollPos > blurb3) {
-            $("#blurb2").css('opacity', '0');
-            $("#blurb3").css('opacity', '1');
-            if (scrollPos > blurb4) {
-              $("#blurb3").css('opacity', '0');
-              $("#blurb4").css('opacity', '1');
-              if (scrollPos > blurb5) {
-                $("#blurb4").css('opacity', '0');
-                $(".sun").addClass('sun-up');
-                $("#blurb5").css('opacity', '1');
-                $(".sign").addClass('sign-up');
-              } else {
-                $("#blurb5").css('opacity', '0');
-                $(".sign").removeClass('sign-up');
-              }
-            } else {
-              $("#blurb3").css('opacity', '1');
-              $("#blurb4").css('opacity', '0');
-            }
-          } else {
-            $("#blurb2").css('opacity', '1');
-            $("#blurb3").css('opacity', '0');
-          }
-        } else {
-          $("#blurb1").css('opacity', '1');
-          $("#blurb2").css('opacity', '0');
-        }
-      } else {
-        $("#blurb1").css('opacity', '0');
-        $(".taneger").removeClass('fly');
-      }
-    } else {
-      $("#scrolldown").css('opacity', '1');
-      $(".title").css("top", "5vh")
-    }
-  });
-});
-</script>
+<div class='funds'>
+  <div class='funds-titles'>
+    <div class='funds-title'>
+      Support Us!
+    </div>
+
+    <div class='funds-subtitle'>
+      Help the Ooolites pay for these singers to come
+    </div>
+    <div class='funds-subtitle-link'>
+      <strong>
+        <%= link_to "learn more", root_path %>
+      </strong>
+    </div>
+  </div>
+
+  <div class='progress'>
+    <div class='progress-bar'>
+      <div class='raised' style=<%="width:#{@snapshot.percent_raised};#{@raised_extra_styles}"%>>
+      </div>
+    </div>
+    <div class='progress-numbers'>
+      <div class='raised'>
+        <%= @snapshot.raised %>
+      </div>
+      <div class='of'>
+        of
+      </div>
+      <div class='goal'>
+        <%= @snapshot.goal %>
+      </div>
+    </div>
+  </div>
+
+  <div class='campaigns'>
+    <% Campaign.all.each do |campaign| %>
+      <a href=<%= "http://www.indiegogo.com/projects/#{campaign.slug}" %>>
+        <div class='campaign' style=<%="background-image:url(#{campaign.image_url})" %>>
+          <div class='campaign-spacer'>
+          </div>
+          <div class='raised-spacer'>
+            <div class='raised-numbers'>
+              <%= campaign.display_raised %> raised
+            </div>
+          </div>
+        </div>
+        <div class='raised-circle'>
+          <svg viewbox="0 0 36.8 36.8" class="circular-chart">
+            <path class="circle"
+              stroke-dasharray=<%= "#{campaign.integer_percent_raised},100" %>
+              d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831"
+            />
+          </svg>
+        </div>
+        <div class='raised-circle togo-circle'>
+          <svg viewbox="0 0 36.8 36.8" class="circular-chart">
+            <path class="circle togo"
+              stroke-dasharray=<%= "100,100" %>
+              d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831"
+            />
+          </svg>
+        </div>
+      </a>
+    <% end %>
+</div>
