@@ -80,3 +80,11 @@ body {
     opacity: 1;
   }
 }
+
+@media screen and (max-width: 780px) {
+    .photo {
+      img {
+        width: 100vw;
+      }
+    }
+}
