@@ -11,65 +11,42 @@
             awaits
           </div>
         </div>
-        <div class='chorus'>
-          <div class='singers'>
-            <div class='singer male sway'>
-              <%= render 'svg/male1.svg' %>
-            </div>
-            <div class='singer female sway'>
-              <%= render 'svg/female1.svg' %>
-            </div>
-            <div class='singer male sway'>
-              <%= render 'svg/male2.svg' %>
-            </div>
-            <div class='singer female sway'>
-              <%= render 'svg/female2.svg' %>
-            </div>
-            <div class='singer male sway'>
-              <%= render 'svg/male3.svg' %>
-            </div>
-            <div class='singer female sway'>
-              <%= render 'svg/female3.svg' %>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class='taneger-fly-space'>
-      <div class='taneger fly'>
-        <%= render 'svg/taneger.svg' %>
       </div>
     </div>
   </div>
 </div>
 
+<div class='chorus'>
+  <div class='singers'>
+    <div class='singer male sway'>
+      <%= render 'svg/male1.svg' %>
+    </div>
+    <div class='singer female sway'>
+      <%= render 'svg/female1.svg' %>
+    </div>
+    <div class='singer male sway'>
+      <%= render 'svg/male2.svg' %>
+    </div>
+    <div class='singer female sway'>
+      <%= render 'svg/female2.svg' %>
+    </div>
+    <div class='singer male sway'>
+      <%= render 'svg/male3.svg' %>
+    </div>
+    <div class='singer female sway'>
+      <%= render 'svg/female3.svg' %>
+    </div>
+  </div>
+  <div class='taneger-fly-space'>
+    <div class='taneger fly'>
+      <%= render 'svg/taneger.svg' %>
+    </div>
+  </div>
+</div>
+
 <div class='photos'>
-  <div class='photo photo1'>
-    <%= image_tag "photo1.jpg" %>
-  </div>
-
-  <div class='photo photo2'>
-    <%= image_tag "photo2.jpg" %>
-  </div>
-
-  <div class='photo photo3'>
-    <%= image_tag "photo3.jpg" %>
-  </div>
-
-  <div class='photo photo4'>
-    <%= image_tag "photo4.jpg" %>
-  </div>
-
   <div class='photo photo5'>
     <%= image_tag "photo5.jpg" %>
-  </div>
-
-  <div class='photo photo6'>
-    <%= image_tag "photo6.jpg" %>
-  </div>
-
-  <div class='photo photo7'>
-    <%= image_tag "photo7.jpg" %>
   </div>
 </div>
 
@@ -81,11 +58,6 @@
 
     <div class='funds-subtitle'>
       Help the Ooolites pay for these singers to come
-    </div>
-    <div class='funds-subtitle-link'>
-      <strong>
-        <%= link_to "learn more", root_path %>
-      </strong>
     </div>
   </div>
 
@@ -144,56 +116,4 @@
 </div>
 
 <script>
-  $(document).ready(function() {
-    let carosel = function() {
-      setTimeout(
-      function()
-      {
-        $('.photo1').css('opacity', '1');
-        setTimeout(
-        function()
-        {
-          $('.photo2').css('opacity', '1');
-          setTimeout(
-          function()
-          {
-            $('.photo3').css('opacity', '1');
-            setTimeout(
-            function()
-            {
-              $('.photo4').css('opacity', '1');
-              setTimeout(
-              function()
-              {
-                $('.photo5').css('opacity', '1');
-                setTimeout(
-                function()
-                {
-                  $('.photo6').css('opacity', '1');
-                  setTimeout(
-                  function()
-                  {
-                    $('.photo7').css('opacity', '1');
-                    setTimeout(
-                    function()
-                    {
-                      $('.photo1').css('opacity', '0');
-                      $('.photo2').css('opacity', '0');
-                      $('.photo3').css('opacity', '0');
-                      $('.photo4').css('opacity', '0');
-                      $('.photo5').css('opacity', '0');
-                      $('.photo6').css('opacity', '0');
-                      $('.photo7').css('opacity', '0');
-                      setTimeout(carosel, 1000);
-                    }, 4000);
-                  }, 4000);
-                }, 4000);
-              }, 4000);
-            }, 4000);
-          }, 4000);
-        }, 4000);
-      }, 4000);
-    }
-    carosel();
-  })
 </script>
