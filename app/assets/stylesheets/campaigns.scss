@@ -3,6 +3,8 @@ $togo-color: #bc9f76;
 
 .funds {
   height: 100vh;
+  position: relative;
+  z-index: 400;
 }
 .campaigns {
   display: flex;

@@ -30,6 +30,7 @@
     top: 80vh;
     height: 15vh;
     color: white;
+    width: 100%;
     text-align: center;
     font-family: 'papyrus';
     font-size: 6.2vw;
@@ -42,14 +43,17 @@
 @media screen and (max-width: 780px) {
     .title {
       height: 68vh;
+      .logo {
+        font-size: 20vw;
+        text-align: center;
+        img {
+          width: 100%;
+          max-width: 100%;
+        }
+      }
       .subtitle {
-        font-size: 6vw;
+        font-size: 10vw;
       }
     }
-    .logo {
-      img {
-        width: 100%;
-        max-width: 100%;
-      }
-    }
+
 }

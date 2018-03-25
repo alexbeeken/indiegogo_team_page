@@ -29,14 +29,16 @@
     width: 17vw;
   }
   .singers {
+    overflow: hidden;
     position: relative;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     align-items: baseline;
     .singer {
+      overflow: hidden;
       z-index: 200;
-      margin-top: 40vh;
+      padding-top: 40vh;
     }
   }
   .sway {
