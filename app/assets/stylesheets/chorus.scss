@@ -19,21 +19,25 @@
 .chorus {
   z-index: 200;
   width: 100%;
-  height: 90vh;
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  align-items: baseline;
+  height: 100vh;
   overflow: hidden;
+  position: absolute;
   .male {
     width: 100px;
   }
   .female {
     width: 90px;
   }
-  .singer {
-    z-index: 200;
-    margin: 0px 10px;
+  .singers {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: baseline;
+    .singer {
+      z-index: 200;
+      margin: 40vh 10px;
+    }
   }
   .sway {
     -moz-animation: sway 3.5s infinite linear forwards; /* Firefox */
@@ -42,4 +46,10 @@
     -webkit-backface-visibility: hidden;
     animation: sway 3.5s infinite linear forwards;
   }
+}
+
+@media screen and (max-width: 780px) {
+    .chorus {
+      margin: 30vh 10px;
+    }
 }

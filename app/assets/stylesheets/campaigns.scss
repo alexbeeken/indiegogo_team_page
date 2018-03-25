@@ -1,8 +1,10 @@
 $raised-color: #6a8751;
 $togo-color: #bc9f76;
 
+.funds {
+  height: 100vh;
+}
 .campaigns {
-  margin-top: 30px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
