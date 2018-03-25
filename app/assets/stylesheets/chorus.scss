@@ -23,20 +23,20 @@
   overflow: hidden;
   position: absolute;
   .male {
-    width: 100px;
+    width: 19vw;
   }
   .female {
-    width: 90px;
+    width: 17vw;
   }
   .singers {
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: row;
     align-items: baseline;
     .singer {
       z-index: 200;
-      margin: 40vh 10px;
+      margin-top: 40vh;
     }
   }
   .sway {
@@ -50,6 +50,6 @@
 
 @media screen and (max-width: 780px) {
     .chorus {
-      margin: 30vh 10px;
+      margin: 30vh 0px;
     }
 }
