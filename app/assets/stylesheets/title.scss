@@ -7,7 +7,9 @@
   width: 100%;
   height: 30vh;
   position: absolute;
+  text-align: center;
   .logo {
+    width: 100%;
     font-size: 8vw;
     font-family: 'papyrus';
     color: white;
@@ -17,8 +19,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    margin-top: 3vh;
     height: 80%;
     img {
       display: block;
@@ -38,6 +38,42 @@
     text-shadow: 0.09vw 0.09vw 0.09vw black;
     -webkit-text-stroke: 0.09vw black;
   }
+  .right {
+    top: 10vh;
+    height: 100vh;
+    width: 50vw;
+    text-align: right;
+    padding-left: 45vw;
+  }
+  .up-left {
+    top: 5vh;
+    text-align: left;
+  }
+  .down-right {
+    top: 80vh;
+    text-align: right;
+  }
+  .small {
+    font-size: 5vw;
+  }
+  .smaller {
+    top: 65vh;
+    font-size: 5.5vw;
+  }
+  .up {
+    font-size: 4vw;
+    top: 5vh;
+  }
+  .subup {
+    position: absolute;
+    top: 16vh;
+  }
+  .paragraph {
+    font-family: 'main';
+    width: 60vw;
+    font-size: 2vw;
+    z-index: 600;
+  }
 }
 
 @media screen and (max-width: 780px) {
@@ -46,14 +82,72 @@
       .logo {
         font-size: 20vw;
         text-align: center;
-        img {
-          width: 100%;
-          max-width: 100%;
-        }
       }
       .subtitle {
         font-size: 10vw;
       }
+      .smaller {
+        font-size: 7vw;
+      }
+      .up-left {
+        top: 70vh;
+      }
+      .right {
+        font-size: 8vw;
+        top: 80vh;
+        height: 100vh;
+        width: 100vw;
+        text-align: center;
+        padding-left: 0;
+      }
+      .up {
+        top: -10vh;
+      }
+      .subup {
+        top: 12vh;
+      }
+      .paragraph {
+        font-size: 5vw;
+      }
     }
+}
 
+@media screen and (min-width: 650px) and (max-width: 780px) {
+  .up-left {
+    top: 5vh;
+    text-align: left;
+  }
+  .down-right {
+    top: 80vh;
+    text-align: right;
+  }
+  .small {
+    font-size: 5vw;
+  }
+  .smaller {
+    top: 40vh;
+    font-size: 5.5vw;
+  }
+  .up {
+    font-size: 4vw;
+    top: 5vh;
+  }
+  .subup {
+    position: absolute;
+    top: 16vh;
+  }
+  .subtitle {
+    font-size: 5vw;
+  }
+  .title {
+    .logo {
+      font-size: 8vw;
+    }
+    .subup {
+      top: 17vh;
+    }
+    .paragraph {
+      font-size: 2vw;
+    }
+  }
 }

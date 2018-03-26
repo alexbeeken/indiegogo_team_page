@@ -22,58 +22,20 @@
 body {
   height: 100%;
   margin: 0px;
-  .sunrise {
-    height: 100vh;
-    background: -webkit-linear-gradient(#8fbfef, #f47142);
-    background: -moz-linear-gradient(top,  #8fbfef 0%, #f47142 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #8fbfef), color-stop(100%, #f47142)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  #8fbfef 0%, #f47142 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  #8fbfef 0%, #f47142 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  #8fbfef 0%, #f47142 100%); /* IE10+ */
-    background: linear-gradient(to top, #8fbfef 0%, #f47142 100%); /* W3C */
-  }
-  .photo1 {
-    z-index: 201;
-    opacity: 1;
-  }
-  .photo2 {
-    z-index: 202;
-  }
-  .photo3 {
-    z-index: 203;
-  }
-  .photo4 {
-    z-index: 204;
-  }
   .photo5 {
     z-index: 205;
   }
-  .photo6 {
-    z-index: 206;
-  }
-  .photo7 {
-    z-index: 207;
+  .photo-slide {
+    height: 100vh;
+    overflow: hidden;
+    background: black;
   }
   .photo {
-    position: absolute;
-    overflow: hidden;
-    height: 100vh;
-    top: 0px;
-    o-transition: opacity 2s; /* Opera */
-    -moz-transition: opacity 2s; /* Firefox */
-    -webkit-transition: opacity 2s;
-    -webkit-backface-visibility: hidden;
-    -webkit-transform-style: preserve-3d;
-    transition: opacity 2s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
+    width: 100%;
     background: black;
     img {
       object-fit: cover;
-      height: 100vh;
+      width: 100%;
     }
   }
   .showing {
@@ -82,9 +44,13 @@ body {
 }
 
 @media screen and (max-width: 780px) {
+    .photo-slide {
+      width: 100vw;
+      overflow: hidden;
+    }
     .photo {
       img {
-        width: 100vw;
+        margin-top: 20vh;
       }
     }
 }

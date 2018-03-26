@@ -1,3 +1,6 @@
+$raised-color: #6a8751;
+$togo-color: #bc9f76;
+
 @-webkit-keyframes sway {
   0%  { transform: rotateY(10deg); }
   100% { transform: rotateY(-10deg); }
@@ -17,20 +20,20 @@
 }
 
 @-webkit-keyframes fly {
-  0%  { transform: scale(0.3, 0.3); left: -50%; top: 300px; }
-  100% { transform: scale(0.8, 0.8); left: 100%; top: 200px; }
+  0%  { transform: scale(0.3, 0.3); left: -10vw; top: 40vh; }
+  100% { transform: scale(0.8, 0.8); left: 100vw; top: 20vh; }
 }
 @-moz-keyframes fly {
-  0%  { transform: scale(0.3, 0.3); left: -50%; top: 300px; }
-  100% { transform: scale(0.8, 0.8); left: 100%; top: 200px; }
+  0%  { transform: scale(0.3, 0.3); left: -10vw; top: 40vh; }
+  100% { transform: scale(0.8, 0.8); left: 100vw; top: 20vh; }
 }
 @-o-keyframes fly {
-  0%  { transform: scale(0.3, 0.3); left: -50%; top: 300px; }
-  100% { transform: scale(0.8, 0.8); left: 100%; top: 200px; }
+  0%  { transform: scale(0.3, 0.3); left: -10vw; top: 40vh; }
+  100% { transform: scale(0.8, 0.8); left: 100vw; top: 20vh; }
 }
 @keyframes fly {
-  0%  { transform: scale(0.3, 0.3); left: -50%; top: 300px; }
-  100% { transform: scale(0.8, 0.8); left: 100%; top: 200px; }
+  0%  { transform: scale(0.3, 0.3); left: -10vw; top: 40vh; }
+  100% { transform: scale(0.8, 0.8); left: 100vw; top: 20vh; }
 }
 
 .chorus {
@@ -38,6 +41,54 @@
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  background: linear-gradient(white, #8fbfef);
+  .progress {
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 35vh;
+    .progress-bar {
+      z-index: 100;
+      height: 20px;
+      width: 70vw;
+      background-color: $togo-color;
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .raised {
+        height: 20px;
+        width: 100vw;
+        background-color: $raised-color;
+        border-radius: 0px;
+      }
+    }
+    .progress-numbers {
+      font-family: 'numbers';
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      font-size: 30px;
+      font-weight: bold;
+      .of {
+        font-size: 25px;
+      }
+      .goal {
+        color: $togo-color;
+        margin-left: 5px;
+      }
+      .raised {
+        color: $raised-color;
+        margin-right: 5px;
+      }
+    }
+  }
   .male {
     width: 19vw;
   }
@@ -54,33 +105,29 @@
     .singer {
       overflow: hidden;
       z-index: 200;
-      padding-top: 40vh;
+      padding-top: 5vh;
     }
   }
   .sway {
-    -moz-animation: sway 3.5s infinite linear forwards; /* Firefox */
-    -o-animation: sway 3.5s infinite linear forwards; /* Opera */
-    -webkit-animation: sway 3.5s infinite linear forwards; /* Safari and Chrome */
-    -webkit-backface-visibility: hidden;
-    animation: sway 3.5s infinite linear forwards;
   }
   .taneger-fly-space {
     z-index: 10;
-    top: 200px;
-    width: 100%;
-    height: 600px;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
     overflow: hidden;
     .taneger {
+      top: 40vh;
+      position: absolute;
       overflow: hidden;
-      left: -20%;
     }
   }
   .fly {
-    -moz-animation: fly 3.5s 1 linear forwards; /* Firefox */
-    -o-animation: fly 3.5s 1 linear forwards; /* Opera */
-    -webkit-animation: fly 3.5s 1 linear forwards; /* Safari and Chrome */
+    -moz-animation: fly 4s infinite ease-in forwards; /* Firefox */
+    -o-animation: fly 4s infinite ease-in forwards; /* Opera */
+    -webkit-animation: fly 4s infinite ease-in forwards; /* Safari and Chrome */
     -webkit-backface-visibility: hidden;
-    animation: fly 3.5s 1 linear forwards;
+    animation: fly 4s infinite ease-in forwards;
   }
 }
 

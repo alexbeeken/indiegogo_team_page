@@ -1,22 +1,105 @@
-<div class='sunrise'>
-  <div class='nature'>
-    <div class='sunrise1'>
-      <a href='#' name='sunrise1'></a>
-      <div class='skyline'>
-        <div class='title'>
-          <div class='logo'>
-            Ooolite Song Kitchen
-          </div>
-          <div class='subtitle'>
-            awaits
-          </div>
-        </div>
+<div class='photo-slide'>
+  <div class='title'>
+    <div class='logo'>
+      Ooolite Song Kitchen
+    </div>
+    <div class='subtitle'>
+      awaits
+    </div>
+  </div>
+  <div class='photo photo5'>
+    <%= image_tag "photo5.jpg" %>
+  </div>
+</div>
+
+<div class='photo-slide'>
+  <div class='sign'>
+    <div class='title'>
+      <div class='subtitle small'>
+        Text that goes about this long in length.
       </div>
+    </div>
+    <div class='photo'>
+      <%= image_tag "sign.jpg" %>
+    </div>
+  </div>
+</div>
+
+<div class='photo-slide'>
+  <div class='photo6'>
+    <div class='title'>
+      <div class='subtitle up-left small'>
+        Shorter text.
+      </div>
+      <div class='subtitle down-right small'>
+        Slightly longer text.
+      </div>
+    </div>
+    <div class='photo'>
+      <%= image_tag "photo6.jpg" %>
+    </div>
+  </div>
+</div>
+
+<div class='photo-slide'>
+  <div class='sign'>
+    <div class='title'>
+      <div class='subtitle smaller'>
+        Text that goes about this long. Text that goes about this long.
+      </div>
+    </div>
+    <div class='photo'>
+      <%= image_tag "nature.jpg" %>
+    </div>
+  </div>
+</div>
+
+<div class='photo-slide'>
+  <div class='sign'>
+    <div class='title'>
+      <div class='subtitle right'>
+        Text that goes about this long.
+        Perhaps longer.
+      </div>
+    </div>
+    <div class='photo'>
+      <%= image_tag "photo1.jpg" %>
     </div>
   </div>
 </div>
 
 <div class='chorus'>
+  <div class='title'>
+    <div class='subtitle up'>
+      A short sentence about fundraising.
+    </div>
+    <div class='paragraph subup'>
+      This is where we can make a little elevator pitch with <a href='http://www.ooolation.com'>links</a>
+       and more explanation of what each person is donating toward.
+    </div>
+  </div>
+  <div class='taneger-fly-space'>
+    <div class='taneger fly'>
+      <%= render 'svg/taneger.svg' %>
+    </div>
+  </div>
+  <div class='progress'>
+    <div class='progress-bar'>
+      <div class='raised' style=<%="width:#{@snapshot.percent_raised};#{@raised_extra_styles}"%>>
+      </div>
+    </div>
+    <div class='progress-numbers'>
+      <div class='raised'>
+        <%= @snapshot.raised %>
+      </div>
+      <div class='of'>
+        of
+      </div>
+      <div class='goal'>
+        <%= @snapshot.goal %>
+      </div>
+    </div>
+  </div>
   <div class='singers'>
     <div class='singer male sway'>
       <%= render 'svg/male1.svg' %>
@@ -37,83 +120,4 @@
       <%= render 'svg/female3.svg' %>
     </div>
   </div>
-  <div class='taneger-fly-space'>
-    <div class='taneger fly'>
-      <%= render 'svg/taneger.svg' %>
-    </div>
-  </div>
 </div>
-
-<div class='photos'>
-  <div class='photo photo5'>
-    <%= image_tag "photo5.jpg" %>
-  </div>
-</div>
-
-<div class='funds'>
-  <div class='funds-titles'>
-    <div class='funds-title'>
-      Support Us!
-    </div>
-
-    <div class='funds-subtitle'>
-      Help the Ooolites pay for these singers to come
-    </div>
-  </div>
-
-  <div class='progress'>
-    <div class='progress-bar'>
-      <div class='raised' style=<%="width:#{@snapshot.percent_raised};#{@raised_extra_styles}"%>>
-      </div>
-    </div>
-    <div class='progress-numbers'>
-      <div class='raised'>
-        <%= @snapshot.raised %>
-      </div>
-      <div class='of'>
-        of
-      </div>
-      <div class='goal'>
-        <%= @snapshot.goal %>
-      </div>
-    </div>
-  </div>
-
-  <div class='campaigns'>
-    <% Campaign.all.each do |campaign| %>
-      <a href=<%= "http://www.indiegogo.com/projects/#{campaign.slug}" %>>
-        <div class='campaign' style=<%="background-image:url(#{campaign.image_url})" %>>
-          <div class='campaign-spacer'>
-          </div>
-          <div class='raised-spacer'>
-            <div class='raised-numbers'>
-              <%= campaign.display_raised %> raised
-            </div>
-          </div>
-        </div>
-        <div class='raised-circle'>
-          <svg viewbox="0 0 36.8 36.8" class="circular-chart">
-            <path class="circle"
-              stroke-dasharray=<%= "#{campaign.integer_percent_raised},100" %>
-              d="M18 2.0845
-                a 15.9155 15.9155 0 0 1 0 31.831
-                a 15.9155 15.9155 0 0 1 0 -31.831"
-            />
-          </svg>
-        </div>
-        <div class='raised-circle togo-circle'>
-          <svg viewbox="0 0 36.8 36.8" class="circular-chart">
-            <path class="circle togo"
-              stroke-dasharray=<%= "100,100" %>
-              d="M18 2.0845
-                a 15.9155 15.9155 0 0 1 0 31.831
-                a 15.9155 15.9155 0 0 1 0 -31.831"
-            />
-          </svg>
-        </div>
-      </a>
-    <% end %>
-</div>
-
-<script>
-</script>

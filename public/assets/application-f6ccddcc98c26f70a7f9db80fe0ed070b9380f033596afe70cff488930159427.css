@@ -1,0 +1,707 @@
+/* line 4, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/campaigns.scss */
+.funds {
+  height: 100vh;
+  position: relative;
+  z-index: 400;
+}
+
+/* line 9, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/campaigns.scss */
+.campaigns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+/* line 16, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/campaigns.scss */
+.campaigns a {
+  text-decoration: none;
+  color: black;
+}
+/* line 20, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/campaigns.scss */
+.campaigns .campaign {
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+  border-radius: 500px;
+  margin: 20px;
+  position: relative;
+  z-index: 20;
+  background-position: center;
+  background-size: 210px;
+}
+/* line 30, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/campaigns.scss */
+.campaigns .campaign .campaign-spacer {
+  height: 120px;
+}
+/* line 33, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/campaigns.scss */
+.campaigns .campaign .raised-spacer {
+  height: 20px;
+}
+/* line 35, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/campaigns.scss */
+.campaigns .campaign .raised-spacer .raised-numbers {
+  z-index: 100;
+  position: relative;
+  font-family: 'numbers';
+  font-weight: bold;
+  display: none;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  text-shadow: 2px 2px 2px black;
+  -webkit-text-stroke: 1px black;
+}
+/* line 48, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/campaigns.scss */
+.campaigns .campaign:hover {
+  box-shadow: 0.03em 0.03em 0.03em 0.03em gray;
+}
+/* line 50, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/campaigns.scss */
+.campaigns .campaign:hover .raised-spacer .raised-numbers {
+  display: block;
+  width: 100%;
+  height: 20px;
+  animation-name: popup;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-out;
+}
+/* line 62, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/campaigns.scss */
+.campaigns .raised-circle {
+  position: relative;
+  z-index: 10;
+  transform: translateY(-240px);
+}
+/* line 66, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/campaigns.scss */
+.campaigns .raised-circle .circular-chart {
+  z-index: 10;
+  position: absolute;
+  width: 249px;
+  height: 241px;
+}
+/* line 67, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/campaigns.scss */
+.campaigns .raised-circle .circular-chart .togo {
+  z-index: 0;
+  stroke: #bc9f76;
+}
+/* line 76, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/campaigns.scss */
+.campaigns .raised-circle .circle {
+  stroke: #6a8751;
+  fill: none;
+  stroke-width: 2;
+  animation: progress 1s ease-out forwards;
+}
+/* line 83, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/campaigns.scss */
+.campaigns .togo-circle {
+  z-index: 9;
+}
+
+@keyframes popup {
+  0% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@-webkit-keyframes sway {
+  0% {
+    transform: rotateY(10deg);
+  }
+  100% {
+    transform: rotateY(-10deg);
+  }
+}
+@-moz-keyframes sway {
+  0% {
+    transform: rotateY(10deg);
+  }
+  100% {
+    transform: rotateY(-10deg);
+  }
+}
+@-o-keyframes sway {
+  0% {
+    transform: rotateY(10deg);
+  }
+  100% {
+    transform: rotateY(-10deg);
+  }
+}
+@keyframes sway {
+  0% {
+    transform: rotate(1deg);
+  }
+  50% {
+    transform: rotate(-1deg);
+  }
+  100% {
+    transform: rotate(1deg);
+  }
+}
+@-webkit-keyframes fly {
+  0% {
+    transform: scale(0.3, 0.3);
+    left: -10vw;
+    top: 40vh;
+  }
+  100% {
+    transform: scale(0.8, 0.8);
+    left: 100vw;
+    top: 20vh;
+  }
+}
+@-moz-keyframes fly {
+  0% {
+    transform: scale(0.3, 0.3);
+    left: -10vw;
+    top: 40vh;
+  }
+  100% {
+    transform: scale(0.8, 0.8);
+    left: 100vw;
+    top: 20vh;
+  }
+}
+@-o-keyframes fly {
+  0% {
+    transform: scale(0.3, 0.3);
+    left: -10vw;
+    top: 40vh;
+  }
+  100% {
+    transform: scale(0.8, 0.8);
+    left: 100vw;
+    top: 20vh;
+  }
+}
+@keyframes fly {
+  0% {
+    transform: scale(0.3, 0.3);
+    left: -10vw;
+    top: 40vh;
+  }
+  100% {
+    transform: scale(0.8, 0.8);
+    left: 100vw;
+    top: 20vh;
+  }
+}
+/* line 39, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/chorus.scss */
+.chorus {
+  z-index: 200;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(white, #8fbfef);
+}
+/* line 45, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/chorus.scss */
+.chorus .progress {
+  width: 100vw;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 35vh;
+}
+/* line 53, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/chorus.scss */
+.chorus .progress .progress-bar {
+  z-index: 100;
+  height: 20px;
+  width: 70vw;
+  background-color: #bc9f76;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* line 63, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/chorus.scss */
+.chorus .progress .progress-bar .raised {
+  height: 20px;
+  width: 100vw;
+  background-color: #6a8751;
+  border-radius: 0px;
+}
+/* line 70, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/chorus.scss */
+.chorus .progress .progress-numbers {
+  font-family: 'numbers';
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 30px;
+  font-weight: bold;
+}
+/* line 79, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/chorus.scss */
+.chorus .progress .progress-numbers .of {
+  font-size: 25px;
+}
+/* line 82, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/chorus.scss */
+.chorus .progress .progress-numbers .goal {
+  color: #bc9f76;
+  margin-left: 5px;
+}
+/* line 86, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/chorus.scss */
+.chorus .progress .progress-numbers .raised {
+  color: #6a8751;
+  margin-right: 5px;
+}
+/* line 92, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/chorus.scss */
+.chorus .male {
+  width: 19vw;
+}
+/* line 95, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/chorus.scss */
+.chorus .female {
+  width: 17vw;
+}
+/* line 98, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/chorus.scss */
+.chorus .singers {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: baseline;
+}
+/* line 105, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/chorus.scss */
+.chorus .singers .singer {
+  overflow: hidden;
+  z-index: 200;
+  padding-top: 5vh;
+}
+/* line 113, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/chorus.scss */
+.chorus .taneger-fly-space {
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  overflow: hidden;
+}
+/* line 119, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/chorus.scss */
+.chorus .taneger-fly-space .taneger {
+  top: 40vh;
+  position: absolute;
+  overflow: hidden;
+}
+/* line 125, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/chorus.scss */
+.chorus .fly {
+  -moz-animation: fly 4s infinite ease-in forwards;
+  /* Firefox */
+  -o-animation: fly 4s infinite ease-in forwards;
+  /* Opera */
+  -webkit-animation: fly 4s infinite ease-in forwards;
+  /* Safari and Chrome */
+  -webkit-backface-visibility: hidden;
+  animation: fly 4s infinite ease-in forwards;
+}
+
+@media screen and (max-width: 780px) {
+  /* line 135, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/chorus.scss */
+  .chorus {
+    margin: 30vh 0px;
+  }
+}
+@font-face {
+  font-family: 'main';
+  src: url(/assets/CormorantGaramond-Medium-5c7cd8553eb6ff6d08fc4408bb63744dfc9f70d64dacd6ec194e3048532323e1.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'main';
+  src: url(/assets/CormorantGaramond-Bold-e77391f7054f9e0611730cb83612a13541bae9377fa9a6cfeaf27a54e45714d3.ttf) format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'numbers';
+  src: url(/assets/Inconsolata-Bold-c268fae6dbf17a27f648218fac958b86dc38e169f6315f0b02866966f56b42bf.ttf) format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'numbers';
+  src: url(/assets/Inconsolata-Regular-e28c150b4390e5fd59aedc2c150b150086fbcba0b4dbde08ac260d6db65018d6.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 3, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/nature.scss */
+.nature {
+  overflow: hidden;
+}
+/* line 5, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/nature.scss */
+.nature .forest {
+  z-index: 50;
+  bottom: -20px;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: baseline;
+}
+/* line 13, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/nature.scss */
+.nature .forest .aspen {
+  width: 100px;
+  max-height: 60vh;
+}
+/* line 19, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/nature.scss */
+.nature .skyline {
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+}
+/* line 25, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/nature.scss */
+.nature .sun {
+  position: fixed;
+  z-index: 9;
+  width: 30vw;
+  top: 50vh;
+  left: 70vw;
+  o-transition: top 4s;
+  /* Opera */
+  -moz-transition: top 4s;
+  /* Firefox */
+  -webkit-transition: top 4s;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  transition: top 4s;
+}
+/* line 39, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/nature.scss */
+.nature .sun-up {
+  top: 20vh;
+}
+/* line 4, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/progress.scss */
+.funds {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(white, #8fbfef);
+  height: 100vh;
+}
+/* line 10, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/progress.scss */
+.funds .funds-titles {
+  width: 100%;
+  font-family: 'main';
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3.7vh;
+  margin-top: 4vh;
+}
+/* line 17, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/progress.scss */
+.funds .funds-titles .funds-title {
+  font-size: 4em;
+  margin-bottom: 1vh;
+}
+/* line 21, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/progress.scss */
+.funds .funds-titles .funds-subtitle {
+  font-size: 1.3em;
+  margin-bottom: 1.5vh;
+}
+/* line 25, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/progress.scss */
+.funds .funds-titles .funds-subtitle-link {
+  font-size: 1.3em;
+}
+/* line 29, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/progress.scss */
+.funds .progress {
+  min-width: 40%;
+  max-width: 800px;
+  margin: auto;
+}
+/* line 33, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/progress.scss */
+.funds .progress .progress-bar {
+  height: 20px;
+  min-width: 300px;
+  max-width: 800px;
+  display: flex;
+  flex-direction: row;
+  background-color: #bc9f76;
+  border-radius: 10px;
+  overflow: hidden;
+}
+/* line 42, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/progress.scss */
+.funds .progress .progress-bar .raised {
+  background-color: #6a8751;
+  border-radius: 0px;
+}
+/* line 47, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/progress.scss */
+.funds .progress .progress-numbers {
+  margin-top: 20px;
+  font-family: 'numbers';
+  font-weight: bold;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 30px;
+  font-weight: bold;
+}
+/* line 58, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/progress.scss */
+.funds .progress .progress-numbers .of {
+  font-size: 25px;
+}
+/* line 61, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/progress.scss */
+.funds .progress .progress-numbers .goal {
+  color: #bc9f76;
+  margin-left: 5px;
+}
+/* line 65, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/progress.scss */
+.funds .progress .progress-numbers .raised {
+  color: #6a8751;
+  margin-right: 5px;
+}
+/* line 1, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/title.scss */
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 500;
+  width: 100%;
+  height: 30vh;
+  position: absolute;
+  text-align: center;
+}
+/* line 11, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/title.scss */
+.title .logo {
+  width: 100%;
+  font-size: 8vw;
+  font-family: 'papyrus';
+  color: white;
+  text-shadow: 0.1vw 0.1vw 0.1vw black;
+  -webkit-text-stroke: 0.1vw black;
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+}
+/* line 23, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/title.scss */
+.title .logo img {
+  display: block;
+  max-width: 500px;
+}
+/* line 28, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/title.scss */
+.title .subtitle {
+  position: absolute;
+  top: 80vh;
+  height: 15vh;
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-family: 'papyrus';
+  font-size: 6.2vw;
+  z-index: 500;
+  text-shadow: 0.09vw 0.09vw 0.09vw black;
+  -webkit-text-stroke: 0.09vw black;
+}
+/* line 41, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/title.scss */
+.title .right {
+  top: 10vh;
+  height: 100vh;
+  width: 50vw;
+  text-align: right;
+  padding-left: 45vw;
+}
+/* line 48, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/title.scss */
+.title .up-left {
+  top: 5vh;
+  text-align: left;
+}
+/* line 52, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/title.scss */
+.title .down-right {
+  top: 80vh;
+  text-align: right;
+}
+/* line 56, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/title.scss */
+.title .small {
+  font-size: 5vw;
+}
+/* line 59, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/title.scss */
+.title .smaller {
+  top: 65vh;
+  font-size: 5.5vw;
+}
+/* line 63, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/title.scss */
+.title .up {
+  font-size: 4vw;
+  top: 5vh;
+}
+/* line 67, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/title.scss */
+.title .subup {
+  position: absolute;
+  top: 16vh;
+}
+/* line 71, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/title.scss */
+.title .paragraph {
+  font-family: 'main';
+  width: 60vw;
+  font-size: 2vw;
+  z-index: 600;
+}
+
+@media screen and (max-width: 780px) {
+  /* line 80, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/title.scss */
+  .title {
+    height: 68vh;
+  }
+  /* line 82, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/title.scss */
+  .title .logo {
+    font-size: 20vw;
+    text-align: center;
+  }
+  /* line 86, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/title.scss */
+  .title .subtitle {
+    font-size: 10vw;
+  }
+  /* line 89, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/title.scss */
+  .title .smaller {
+    font-size: 7vw;
+  }
+  /* line 92, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/title.scss */
+  .title .up-left {
+    top: 70vh;
+  }
+  /* line 95, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/title.scss */
+  .title .right {
+    font-size: 8vw;
+    top: 80vh;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    padding-left: 0;
+  }
+  /* line 103, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/title.scss */
+  .title .up {
+    top: -10vh;
+  }
+  /* line 106, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/title.scss */
+  .title .subup {
+    top: 12vh;
+  }
+  /* line 109, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/title.scss */
+  .title .paragraph {
+    font-size: 5vw;
+  }
+}
+@media screen and (min-width: 650px) and (max-width: 780px) {
+  /* line 116, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/title.scss */
+  .up-left {
+    top: 5vh;
+    text-align: left;
+  }
+
+  /* line 120, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/title.scss */
+  .down-right {
+    top: 80vh;
+    text-align: right;
+  }
+
+  /* line 124, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/title.scss */
+  .small {
+    font-size: 5vw;
+  }
+
+  /* line 127, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/title.scss */
+  .smaller {
+    top: 40vh;
+    font-size: 5.5vw;
+  }
+
+  /* line 131, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/title.scss */
+  .up {
+    font-size: 4vw;
+    top: 5vh;
+  }
+
+  /* line 135, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/title.scss */
+  .subup {
+    position: absolute;
+    top: 16vh;
+  }
+
+  /* line 139, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/title.scss */
+  .subtitle {
+    font-size: 5vw;
+  }
+
+  /* line 143, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/title.scss */
+  .title .logo {
+    font-size: 8vw;
+  }
+  /* line 146, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/title.scss */
+  .title .subup {
+    top: 17vh;
+  }
+  /* line 149, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/title.scss */
+  .title .paragraph {
+    font-size: 2vw;
+  }
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* line 23, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/application.scss */
+body {
+  height: 100%;
+  margin: 0px;
+}
+/* line 26, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/application.scss */
+body .photo5 {
+  z-index: 205;
+}
+/* line 29, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/application.scss */
+body .photo-slide {
+  height: 100vh;
+  overflow: hidden;
+  background: black;
+}
+/* line 34, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/application.scss */
+body .photo {
+  width: 100%;
+  background: black;
+}
+/* line 37, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/application.scss */
+body .photo img {
+  object-fit: cover;
+  width: 100%;
+}
+/* line 42, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/application.scss */
+body .showing {
+  opacity: 1;
+}
+
+@media screen and (max-width: 780px) {
+  /* line 48, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/application.scss */
+  .photo-slide {
+    width: 100vw;
+    overflow: hidden;
+  }
+
+  /* line 53, /Users/alexbeeken/Code/ooolation_fundraising/app/assets/stylesheets/application.scss */
+  .photo img {
+    margin-top: 20vh;
+  }
+}
